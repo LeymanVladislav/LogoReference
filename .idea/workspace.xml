@@ -6,12 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="Commit From LV PC">
+    <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/AddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/AddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/list.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,6 +18,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -37,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -55,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/AddServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="394">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/web/views/add.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#label#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -88,11 +99,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="187">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/73cb07d4-1bc3-49f0-afdc-277fb9dfa65e/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -160,6 +180,7 @@
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/views/add.jsp" />
         <option value="$PROJECT_DIR$/web/views/list.jsp" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/73cb07d4-1bc3-49f0-afdc-277fb9dfa65e/console.sql" />
       </list>
     </option>
   </component>
@@ -222,6 +243,13 @@
               <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -274,7 +302,7 @@
               <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
               <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
@@ -447,7 +475,7 @@
       <workItem from="1523187585015" duration="124000" />
       <workItem from="1523187896358" duration="3863000" />
       <workItem from="1523367755895" duration="11225000" />
-      <workItem from="1523970235069" duration="6284000" />
+      <workItem from="1523970235069" duration="7769000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1523179042865</created>
@@ -505,11 +533,25 @@
       <option name="project" value="LOCAL" />
       <updated>1523380899066</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Commit From LV PC">
+      <created>1523976881153</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1523976881153</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Commit From LV PC">
+      <created>1523976955363</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1523976955363</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23670000" />
+    <option name="totallyTimeSpent" value="25155000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -537,7 +579,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919093" weight="0.32946634" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" sideWeight="0.49676377" visible="true" weight="0.32946634" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49676377" weight="0.32946634" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" />
@@ -545,13 +587,14 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4959547" weight="0.32946634" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32946634" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49838188" weight="0.32946634" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9221453" visible="true" weight="0.27022654" />
+      <window_info anchor="bottom" id="Database Console" visible="true" weight="0.32946634" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9221453" visible="true" weight="0.27022654" />
       <window_info id="Web" order="2" sideWeight="0.07785467" side_tool="true" weight="0.26618123" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -820,7 +863,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/AddServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -830,14 +873,14 @@
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/add.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#input#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#label#1;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -847,8 +890,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="187">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/73cb07d4-1bc3-49f0-afdc-277fb9dfa65e/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>
