@@ -1,5 +1,5 @@
-<%@ page import="java.util.List" %>
 <%@ page import="app.db.SQLiteJDBCDriverConnection" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
@@ -19,7 +19,22 @@
         </div>
         <%
             out.println("Connection to SQLite...");
-            SQLiteJDBCDriverConnection.main();
+
+            ArrayList<String> Names = (ArrayList<String>) request.getAttribute("userNames");
+
+            if (Names != null && !Names.isEmpty()) {
+                out.println("<ul class=\"w3-ul\">");
+                for (String s : Names) {
+                    out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
+                }
+                out.println("</ul>");
+
+            } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"
+                    +
+                    "   <span onclick=\"this.parentElement.style.display='none'\"\n" +
+                    "   class=\"w3-button w3-margin-right w3-display-right w3-round-large w3-hover-red w3-border w3-border-red w3-hover-border-grey\">×</span>\n" +
+                    "   <h5>There are no users yet!</h5>\n" +
+                    "</div>");
         %>
     </div>
 </div>
