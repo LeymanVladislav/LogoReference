@@ -26,15 +26,4 @@
         <url-pattern>/list</url-pattern>
     </servlet-mapping>
 
-    <!-- DB servlet -->
-    <servlet>
-        <servlet-name>db</servlet-name>
-        <servlet-class>app.servlets.DBServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>db</servlet-name>
-        <url-pattern>/db</url-pattern>
-    </servlet-mapping>
-
 </web-app>

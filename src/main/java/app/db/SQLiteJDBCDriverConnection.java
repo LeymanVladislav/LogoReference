@@ -49,8 +49,8 @@ public class SQLiteJDBCDriverConnection {
         String sql = "select * \n"
                 + "from users;";
 
-        ArrayList<String> Names = new ArrayList<String>();
-        ArrayList<String> Pass = new ArrayList<String>();
+        ArrayList<String> Names = new ArrayList<>();
+        ArrayList<String> Pass = new ArrayList<>();
 
         try {
             Statement stmt = conn.createStatement();
@@ -71,8 +71,24 @@ public class SQLiteJDBCDriverConnection {
 
         } catch (SQLException e) {
             System.out.println(PKG_NAME + "." + Modul + e.getMessage());
-        }finally {
-            return Names;
+        }
+        return Names;
+    }
+
+    public static void AddUser(String Name, String Pass) {
+        String Modul = "AddUser ";
+
+        // SQL statement for get user list
+        String sql = "insert into users (NAME, PASS)  VALUES ('" + Name + "', '" + Pass + "');\n"
+                + "commit;";
+
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(sql);
+            System.out.println(PKG_NAME + "." + Modul + "USER " + Name + " has been added");
+
+        } catch (SQLException e) {
+            System.out.println(PKG_NAME + "." + Modul + e.getMessage());
         }
     }
 
