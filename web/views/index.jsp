@@ -9,7 +9,7 @@
 <body class="w3-light-grey">
 <!-- header -->
 <div class="w3-container w3-blue-grey w3-opacity w3-right-align">
-    <h1>Super app!</h1>
+    <h1>Super app! (by servlet index)</h1>
 </div>
 
 <div class="w3-container w3-center">       <!-- content -->
@@ -19,4 +19,4 @@
     </div>
 </div>
 </body>
-</html>
+</html>K
