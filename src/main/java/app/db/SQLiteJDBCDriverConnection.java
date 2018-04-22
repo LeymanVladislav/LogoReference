@@ -9,19 +9,22 @@ import java.util.ArrayList;
  */
 public class SQLiteJDBCDriverConnection {
     private static String PKG_NAME = "SQLiteJDBCDriverConnection";
-    private static String url = "jdbc:sqlite:E:/GITHUB/IDEA/LogoReference/src/main/db/SQLite.s3db";
+    private static String url = "jdbc:postgresql://127.0.0.1:5432/postgres";
+    private static String USER = "sys";
+    private static String PASS = "19871214";
     private static Connection conn = null;
     /**
      * Connect to a sample database
      */
+    // Соединение с базой
     public static void connect() {
         String Modul = "connect ";
 
         try {
             // Register JDBC Driver
-            DriverManager.registerDriver(new org.sqlite.JDBC());
+            DriverManager.registerDriver(new org.postgresql.Driver());
             // create a connection to the database
-            conn = DriverManager.getConnection(url);
+            conn = DriverManager.getConnection(url, USER, PASS);
 
             System.out.println(PKG_NAME + "." + Modul + "Connection to SQLite has been established.");
 
@@ -30,6 +33,7 @@ public class SQLiteJDBCDriverConnection {
         }
     }
 
+    // Завершение соединения с базой
     public static void close() {
         String Modul = "close ";
         try {
@@ -42,6 +46,7 @@ public class SQLiteJDBCDriverConnection {
             }
     }
 
+    // Получение списка пользователей
     public static ArrayList<String> getUserList() {
         String Modul = "getUserList ";
 
@@ -75,6 +80,7 @@ public class SQLiteJDBCDriverConnection {
         return Names;
     }
 
+    // Добавление пользователя
     public static void AddUser(String Name, String Pass) {
         String Modul = "AddUser ";
 
