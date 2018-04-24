@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* LogoReference
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* index.html
