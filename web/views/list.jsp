@@ -1,4 +1,4 @@
-<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
@@ -17,7 +17,7 @@
             <h2>Users</h2>
         </div>
         <%
-            List<String> names = (List<String>) request.getAttribute("userNames");
+            ArrayList<String> names = (ArrayList<String>) request.getAttribute("userNames");
 
             if (names != null && !names.isEmpty()) {
                 out.println("<ul class=\"w3-ul\">");
