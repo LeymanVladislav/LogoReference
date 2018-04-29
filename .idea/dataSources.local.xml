@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SQLite.s3db" uuid="73cb07d4-1bc3-49f0-afdc-277fb9dfa65e">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
+    <data-source name="new_file" uuid="2033b635-eed9-4b88-9a64-09fd7070f9d9">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
+    <data-source name="SQLite1.s3db" uuid="64e347a8-02d9-47ad-8eb3-532dd6e4a4bd">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
+    <data-source name="SQLite.s3db [2]" uuid="0a66b407-7d1d-40c6-8149-4bb5fb551438">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
+    <data-source name="SQLite.s3db [3]" uuid="8fb460b8-e642-434e-92bc-37e5aeff9705">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
+  </component>
+</project>
