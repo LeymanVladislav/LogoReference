@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="" />
+    <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +51,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="69" column="56" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
+            <state relative-caret-position="578">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -144,54 +146,13 @@
             <path>
               <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
               <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
-              <item name="Java Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
-              <item name="Java Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
-              <item name="Java Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
-              <item name="Java Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
               <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,6 +183,7 @@
       <recent name="app.servlets" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GITHUB\IDEA\LogoReference\Java Resources\src\java" />
       <recent name="E:\GITHUB\IDEA\LogoReference\src\main\webapp" />
       <recent name="E:\GITHUB\IDEA\LogoReference\src\main\java" />
       <recent name="E:\GITHUB\IDEA\LogoReference\web\views" />
@@ -409,7 +371,7 @@
       <workItem from="1524579727108" duration="7883000" />
       <workItem from="1524591676493" duration="931000" />
       <workItem from="1524749161724" duration="1557000" />
-      <workItem from="1524986721272" duration="3318000" />
+      <workItem from="1524986721272" duration="3986000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1523179042865</created>
@@ -628,11 +590,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524989855990</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Commit From LV PC">
+      <created>1524990260952</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1524990260952</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81773000" />
+    <option name="totallyTimeSpent" value="82441000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -771,13 +740,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/views/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/entities/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -1062,6 +1024,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/w3.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Java Resources/src/java/app/db/SQLiteJDBCDriverConnection.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1071,8 +1036,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="56" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
+        <state relative-caret-position="578">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -1082,7 +1047,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited />
+          <last-edited>LogoReference:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
