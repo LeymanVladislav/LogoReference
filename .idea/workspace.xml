@@ -714,11 +714,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525000087707</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Commit From LV PC">
+      <created>1525000554871</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1525000554871</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88771000" />
+    <option name="totallyTimeSpent" value="89050000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
