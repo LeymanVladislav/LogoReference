@@ -4,17 +4,6 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-    <!-- index servlet -->
-    <servlet>
-        <servlet-name>index</servlet-name>
-        <servlet-class>app.servlets.IndexServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>index</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
-
     <!-- add servlet -->
     <servlet>
         <servlet-name>add</servlet-name>
