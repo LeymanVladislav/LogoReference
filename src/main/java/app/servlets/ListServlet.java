@@ -13,6 +13,10 @@ import java.util.ArrayList;
 public class ListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // Задаем кодировку для обработчика запросов
+        resp.setContentType("UTF-8");
+        req.setCharacterEncoding("UTF-8");
+
         ArrayList<String> Names;
         SQLiteJDBCDriverConnection.connect();
         Names = SQLiteJDBCDriverConnection.getUserList();
