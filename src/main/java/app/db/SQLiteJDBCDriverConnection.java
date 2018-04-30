@@ -10,11 +10,12 @@ import java.util.ArrayList;
 public class SQLiteJDBCDriverConnection {
     private static String PKG_NAME = "SQLiteJDBCDriverConnection";
     private static String url = "jdbc:postgres://"
-                                + "jrcyfbsexdmqnt:2f4a45cef0abbfe16df17d93565ab53d16e2b4994845a77fae3f01c0c7635f07@"
-                                + "ec2-79-125-117-53.eu-west-1.compute.amazonaws.com:5432/d40963l0827185"
-                                + "?sslmode=require";
-    private static String USER = "jrcyfbsexdmqnt";
-    private static String PASS = "2f4a45cef0abbfe16df17d93565ab53d16e2b4994845a77fae3f01c0c7635f07";
+                                //+ "jrcyfbsexdmqnt:2f4a45cef0abbfe16df17d93565ab53d16e2b4994845a77fae3f01c0c7635f07@"
+                                //+ "ec2-79-125-117-53.eu-west-1.compute.amazonaws.com:5432/d40963l0827185";
+                                //+ "?sslmode=require";
+                                + "localhost:5432/postgres";
+    private static String USER = "sys"; //"jrcyfbsexdmqnt";
+    private static String PASS = "19871214"; //"2f4a45cef0abbfe16df17d93565ab53d16e2b4994845a77fae3f01c0c7635f07";
     private static Connection conn = null;
     /**
      * Connect to a sample database
@@ -26,6 +27,7 @@ public class SQLiteJDBCDriverConnection {
         try {
             // Register JDBC Driver
             DriverManager.registerDriver(new org.postgresql.Driver());
+            //Class.forName("org.postgresql.Driver");
             // create a connection to the database
             conn = DriverManager.getConnection(url, USER, PASS);
 
@@ -104,7 +106,7 @@ public class SQLiteJDBCDriverConnection {
 
     public static void main(String[] args) {
         connect();
-        getUserList();
+        //getUserList();
         close();
     }
 }

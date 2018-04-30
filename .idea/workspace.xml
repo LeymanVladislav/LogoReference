@@ -7,8 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LogoReference_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LogoReference_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/db/SQLiteJDBCDriverConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/db/SQLiteJDBCDriverConnection.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,20 +42,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+            <state relative-caret-position="309">
+              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+            <state relative-caret-position="119">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLiteJDBCDriverConnection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/db/SQLiteJDBCDriverConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="21" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/entities/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -91,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/DBServlet.java" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/db/SQLiteJDBCDriverConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/IndexServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/views/index.jsp" />
@@ -104,8 +135,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/add.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/app/db/SQLiteJDBCDriverConnection.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -143,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,15 +225,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LogoReference" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LogoReference" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -239,7 +263,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -293,7 +316,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat">
+  <component name="RunManager" selected="Application.SQLiteJDBCDriverConnection">
     <configuration name="SQLiteJDBCDriverConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.db.SQLiteJDBCDriverConnection" />
       <module name="LogoReference" />
@@ -456,13 +479,7 @@
       <workItem from="1524591676493" duration="931000" />
       <workItem from="1524749161724" duration="1557000" />
       <workItem from="1524986721272" duration="4392000" />
-    </task>
-    <task id="LOCAL-00003" summary="test idea">
-      <created>1523188069835</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1523188069835</updated>
+      <workItem from="1525060666615" duration="3617000" />
     </task>
     <task id="LOCAL-00004" summary="ADD WEB">
       <created>1523188551562</created>
@@ -800,11 +817,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525005352891</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Commit From LV PC">
+      <created>1525005990044</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1525005990044</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92780000" />
+    <option name="totallyTimeSpent" value="98717000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -820,64 +844,39 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5040453" side_tool="true" weight="0.32946634" />
-      <window_info anchor="bottom" id="Application Servers" order="15" sideWeight="0.49838188" weight="0.32946634" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="8" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32946634" />
-      <window_info anchor="right" id="Database" order="9" weight="0.32928804" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39907193" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49838188" weight="0.32946634" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49676377" weight="0.32946634" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info id="Image Layers" order="5" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" sideWeight="0.49838188" weight="0.32946634" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49514562" weight="0.32946634" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4959547" visible="true" weight="0.32946634" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4975728" weight="0.32946634" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9031142" visible="true" weight="0.33090615" />
-      <window_info id="Web" order="4" sideWeight="0.096885815" side_tool="true" weight="0.3317152" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4959547" visible="true" weight="0.32946634" />
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.5040453" side_tool="true" weight="0.32946634" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.9031142" visible="true" weight="0.33090615" />
-      <window_info id="Favorites" order="10" side_tool="true" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.27508092" />
-      <window_info anchor="bottom" id="Java Enterprise" order="21" sideWeight="0.49838188" weight="0.32946634" />
-      <window_info anchor="bottom" id="Terminal" order="18" sideWeight="0.4975728" weight="0.32946634" />
       <window_info anchor="bottom" id="Application Servers" order="22" sideWeight="0.49838188" weight="0.32946634" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info id="Web" order="11" sideWeight="0.096885815" side_tool="true" weight="0.3317152" />
       <window_info anchor="bottom" id="Database Changes" order="19" show_stripe_button="false" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="12" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Database" order="9" weight="0.32928804" />
       <window_info id="Capture Tool" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="20" sideWeight="0.49514562" weight="0.32946634" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="TODO" order="16" sideWeight="0.49838188" weight="0.32946634" />
-      <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
-      <window_info anchor="bottom" id="Database Console" order="23" weight="0.32946634" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info id="Designer" order="15" />
+      <window_info anchor="right" id="Database" order="9" weight="0.32928804" />
+      <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="14" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.39907193" />
+      <window_info anchor="bottom" id="TODO" order="16" sideWeight="0.49838188" weight="0.32946634" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49676377" weight="0.32946634" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info id="Image Layers" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="21" sideWeight="0.49838188" weight="0.32946634" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="20" sideWeight="0.49514562" weight="0.32946634" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4959547" visible="true" weight="0.32946634" />
+      <window_info anchor="bottom" id="Terminal" order="18" sideWeight="0.4975728" weight="0.32946634" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.9031142" visible="true" weight="0.33656958" />
+      <window_info id="Web" order="11" sideWeight="0.096885815" side_tool="true" weight="0.3317152" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info id="Designer" order="15" />
+      <window_info anchor="bottom" id="Database Console" order="23" weight="0.32946634" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.27508092" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="16" weight="0.32946634" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Application Servers" order="11" sideWeight="0.49838188" weight="0.32946634" />
@@ -897,19 +896,19 @@
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49676377" visible="true" weight="0.32946634" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49838188" weight="0.32946634" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9031142" visible="true" weight="0.3317152" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" sideWeight="0.49838188" weight="0.32946634" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49514562" weight="0.32946634" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9031142" visible="true" weight="0.3317152" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="9" weight="0.32928804" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Web" order="7" sideWeight="0.096885815" side_tool="true" visible="true" weight="0.3317152" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.27508092" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39907193" />
@@ -1078,7 +1077,6 @@
     <entry file="file://$PROJECT_DIR$/Java Resources/src/java/app/servlets/ListServlet.java" />
     <entry file="file://$PROJECT_DIR$/src/app/servlets/ListServlet.java" />
     <entry file="file://$PROJECT_DIR$/src/app/servlets/AddServlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/entities/User.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/IndexServlet.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java" />
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1143,31 +1141,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="119">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/db/SQLiteJDBCDriverConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+        <state relative-caret-position="238">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="21" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        <state relative-caret-position="309">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
         </state>
       </provider>
     </entry>
