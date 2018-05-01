@@ -1,4 +1,5 @@
 <%@ page import="java.util.ArrayList" language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="app.db.SQLiteJDBCDriverConnection" %>
 <html>
 <head>
     <title>Users list</title>
@@ -16,14 +17,22 @@
             <h2>Users</h2>
         </div>
         <%
-            ArrayList<String> names = (ArrayList<String>) request.getAttribute("userNames");
+            //ArrayList<String> names = (ArrayList<String>) request.getAttribute("userNames");
+            ArrayList<SQLiteJDBCDriverConnection.UserType> UserList = (ArrayList<SQLiteJDBCDriverConnection.UserType>) request.getAttribute("UserList");
 
-            if (names != null && !names.isEmpty()) {
-                out.println("<ul class=\"w3-ul\">");
-                for (String s : names) {
-                    out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
+            if (UserList != null && !UserList.isEmpty()) {
+                out.println("<ul class=\"w3-ul\">"
+                            + "<table>\n"
+                            + "<tr><th>Имя пользователя</th><th>текст заголовка</th></tr> <!--ряд с ячейками заголовков-->\n");
+                for (SQLiteJDBCDriverConnection.UserType s : UserList) {
+                    //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
+                    out.println(
+                               "<tr><td>" + s.Names + "</td><td>" + s.Pass + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
+
+                    );
                 }
-                out.println("</ul>");
+                out.println("</table>\n"
+                            + "</ul>");
 
             } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"
                     +

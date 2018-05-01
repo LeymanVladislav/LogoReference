@@ -19,6 +19,12 @@ public class SQLiteJDBCDriverConnection {
     private static String url = DBDriver + "://" + Host + ":" + Port + "/" + DBName + "?" + SSLMode;
                                 //"jdbc:postgresql://localhost:5432/postgres";
     private static Connection conn = null;
+
+    public static class UserType {
+        public String Names;
+        public String Pass;
+    }
+
     /**
      * Connect to a sample database
      */
@@ -54,15 +60,14 @@ public class SQLiteJDBCDriverConnection {
     }
 
     // Получение списка пользователей
-    public static ArrayList<String> getUserList() {
+    public static ArrayList<UserType> getUserList() {
         String Modul = "getUserList ";
 
         // SQL statement for get user list
         String sql = "select * \n"
                 + "from users;";
 
-        ArrayList<String> Names = new ArrayList<>();
-        ArrayList<String> Pass = new ArrayList<>();
+        ArrayList<UserType> UserList = new ArrayList<>();
 
         try {
             Statement stmt = conn.createStatement();
@@ -72,8 +77,10 @@ public class SQLiteJDBCDriverConnection {
             System.out.println(PKG_NAME + "." + Modul + " SQL RESULT:");
             // loop through the result set
             while (rs.next()) {
-                Names.add(rs.getString("NAME"));
-                Pass.add(rs.getString("PASS"));
+                UserType UserStr = new UserType();
+                UserStr.Names = rs.getString("NAME");
+                UserStr.Pass = rs.getString("PASS");
+                UserList.add(UserStr);
 
                 System.out.println(rs.getInt("id") + "\t" +
                         rs.getString("NAME") + "\t" +
@@ -84,7 +91,7 @@ public class SQLiteJDBCDriverConnection {
         } catch (SQLException e) {
             System.out.println(PKG_NAME + "." + Modul + e.getMessage());
         }
-        return Names;
+        return UserList;
     }
 
     // Добавление пользователя

@@ -17,13 +17,13 @@ public class ListServlet extends HttpServlet {
         resp.setContentType("UTF-8");
         req.setCharacterEncoding("UTF-8");
 
-        ArrayList<String> Names;
+        ArrayList<SQLiteJDBCDriverConnection.UserType> UserList;
         SQLiteJDBCDriverConnection.connect();
-        Names = SQLiteJDBCDriverConnection.getUserList();
+        UserList = SQLiteJDBCDriverConnection.getUserList();
         SQLiteJDBCDriverConnection.close();
-        System.out.println("DBServlet Names.size():" + Names.size());
+        //System.out.println("DBServlet Names.size():" + Names.size());
 
-        req.setAttribute("userNames", Names);
+        req.setAttribute("UserList", UserList);
 
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/list.jsp");
         requestDispatcher.forward(req, resp);
