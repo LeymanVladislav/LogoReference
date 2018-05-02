@@ -1,6 +1,6 @@
 package app.servlets;
 
-import app.db.SQLiteJDBCDriverConnection;
+import app.db.JDBCDriverConnection;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -27,9 +27,9 @@ public class AddServlet extends HttpServlet {
 
         String Name = req.getParameter("name");
         String Password = req.getParameter("pass");
-        SQLiteJDBCDriverConnection.connect();
-        SQLiteJDBCDriverConnection.AddUser(Name,Password);
-        SQLiteJDBCDriverConnection.close();
+        JDBCDriverConnection.connect();
+        JDBCDriverConnection.AddUser(Name,Password);
+        JDBCDriverConnection.close();
 
         req.setAttribute("userName", Name);
         doGet(req, resp);

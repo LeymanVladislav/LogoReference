@@ -17,19 +17,24 @@
             <h2>Users</h2>
         </div>
         <%
+            //ArrayList<String> names = (ArrayList<String>) request.getAttribute("userNames");
             ArrayList<JDBCDriverConnection.UserType> UserList = (ArrayList<JDBCDriverConnection.UserType>) request.getAttribute("UserList");
 
             if (UserList != null && !UserList.isEmpty()) {
-                out.println("<table class=\"w3-table-all\">\n"
-                            + "<tr class=\"w3-blue\"><th>Имя пользователя</th><th>текст заголовка</th></tr> <!--ряд с ячейками заголовков-->\n");
+                out.println(
+                        "<form method=\"post\" class=\"w3-selection w3-light-grey w3-padding\">\n"
+                        + "<table class=\"w3-table-all\">\n"
+                            + "<tr class=\"w3-blue\"><th>Change</th><th>ID</th><th>Имя пользователя</th><th>Пароль</th></tr> <!--ряд с ячейками заголовков-->\n");
                 for (JDBCDriverConnection.UserType s : UserList) {
                     //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
                     out.println(
-                               "<tr><td>" + s.Names + "</td><td>" + s.Pass + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
+                               "<tr><td><input type=\"checkbox\" name=\"ID\" value=\"" + s.Id + "\"/></td><td>" + s.Id + "</td><td>" + s.Names + "</td><td>" + s.Pass + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
 
                     );
                 }
-                out.println("</table>");
+                out.println("</table>"
+                        + "<p><button type=\"submit\" class=\"w3-btn w3-blue w3-round-large w3-margin-bottom\">Submit</button></p>"
+                        + "</form>");
 
             } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"
                     +

@@ -1,6 +1,6 @@
 package app.servlets;
 
-import app.db.SQLiteJDBCDriverConnection;
+import app.db.JDBCDriverConnection;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,20 +12,20 @@ import java.util.ArrayList;
 
 public class ListServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Задаем кодировку для обработчика запросов
-        resp.setContentType("UTF-8");
-        req.setCharacterEncoding("UTF-8");
+        response.setContentType("UTF-8");
+        request.setCharacterEncoding("UTF-8");
 
-        ArrayList<SQLiteJDBCDriverConnection.UserType> UserList;
-        SQLiteJDBCDriverConnection.connect();
-        UserList = SQLiteJDBCDriverConnection.getUserList();
-        SQLiteJDBCDriverConnection.close();
+        ArrayList<JDBCDriverConnection.UserType> UserList;
+        JDBCDriverConnection.connect();
+        UserList = JDBCDriverConnection.getUserList();
+        JDBCDriverConnection.close();
         //System.out.println("DBServlet Names.size():" + Names.size());
 
-        req.setAttribute("UserList", UserList);
+        request.setAttribute("UserList", UserList);
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/list.jsp");
-        requestDispatcher.forward(req, resp);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/list.jsp");
+        requestDispatcher.forward(request, response);
     }
 }

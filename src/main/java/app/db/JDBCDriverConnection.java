@@ -7,8 +7,8 @@ import java.util.ArrayList;
  *
  * @author sqlitetutorial.net
  */
-public class SQLiteJDBCDriverConnection {
-    private static String PKG_NAME = "SQLiteJDBCDriverConnection";
+public class JDBCDriverConnection {
+    private static String PKG_NAME = "JDBCDriverConnection";
     private static String DBDriver = "jdbc:postgresql";
     private static String Host = "ec2-79-125-117-53.eu-west-1.compute.amazonaws.com";
     private static String Port = "5432";
@@ -21,6 +21,7 @@ public class SQLiteJDBCDriverConnection {
     private static Connection conn = null;
 
     public static class UserType {
+        public String Id;
         public String Names;
         public String Pass;
     }
@@ -60,12 +61,27 @@ public class SQLiteJDBCDriverConnection {
     }
 
     // Получение списка пользователей
-    public static ArrayList<UserType> getUserList() {
+    public static ArrayList<UserType> getUserList(ArrayList<String> IDList) {
         String Modul = "getUserList ";
-
+        System.out.println("getUserList");
         // SQL statement for get user list
         String sql = "select * \n"
-                + "from users;";
+                + "from users";
+        String id = null;
+        if(IDList != null && !IDList.isEmpty()){
+            System.out.println("IDList is not null");
+            for (int i = 0; i < IDList.size(); i = i + 1)
+                if (i == 0) {
+                    id = IDList.get(i);
+                } else {
+                    id += ", " + IDList.get(i);
+                }
+            sql = sql + " where id in (" + id + ")";
+        }
+
+        sql = sql + ";";
+
+        System.out.println(PKG_NAME + "." + Modul + " sql:" + sql);
 
         ArrayList<UserType> UserList = new ArrayList<>();
 
@@ -78,11 +94,12 @@ public class SQLiteJDBCDriverConnection {
             // loop through the result set
             while (rs.next()) {
                 UserType UserStr = new UserType();
+                UserStr.Id = rs.getString("ID");
                 UserStr.Names = rs.getString("NAME");
                 UserStr.Pass = rs.getString("PASS");
                 UserList.add(UserStr);
 
-                System.out.println(rs.getInt("id") + "\t" +
+                System.out.println(rs.getInt("ID") + "\t" +
                         rs.getString("NAME") + "\t" +
                         rs.getString("PASS"));
                         //rs.getDouble("capacity"));
@@ -92,6 +109,10 @@ public class SQLiteJDBCDriverConnection {
             System.out.println(PKG_NAME + "." + Modul + e.getMessage());
         }
         return UserList;
+    }
+    // Получение списка пользователей
+    public static ArrayList<UserType> getUserList() {
+        return getUserList(null);
     }
 
     // Добавление пользователя
@@ -115,7 +136,11 @@ public class SQLiteJDBCDriverConnection {
 
     public static void main(String[] args) {
         connect();
-        //getUserList();
+        ArrayList<String> Idlst = new ArrayList<>();
+        Idlst.add("4");
+        Idlst.add("1");
+        //System.out.println("test: " + Idlst.get(2));
+        getUserList(Idlst);
         close();
     }
 }
