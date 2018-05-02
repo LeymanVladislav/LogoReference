@@ -4,10 +4,10 @@ import app.entities.User;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+//import java.util.stream.Collectors;
 
 public class Model {
-    private static Model instance = new Model();
+  /*  private static Model instance = new Model();
 
     private List<User> model;
 
@@ -27,5 +27,5 @@ public class Model {
         return model.stream()
                 .map(User::getName)
                 .collect(Collectors.toList());
-    }
+    }*/
 }

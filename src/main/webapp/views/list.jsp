@@ -1,9 +1,9 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ page import="java.util.ArrayList" language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="app.db.JDBCDriverConnection" %>
 <html>
 <head>
     <title>Users list</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="styles/w3.css">
 </head>
 
 <body class="w3-light-grey">
@@ -17,14 +17,19 @@
             <h2>Users</h2>
         </div>
         <%
-            ArrayList<String> names = (ArrayList<String>) request.getAttribute("userNames");
+            ArrayList<JDBCDriverConnection.UserType> UserList = (ArrayList<JDBCDriverConnection.UserType>) request.getAttribute("UserList");
 
-            if (names != null && !names.isEmpty()) {
-                out.println("<ul class=\"w3-ul\">");
-                for (String s : names) {
-                    out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
+            if (UserList != null && !UserList.isEmpty()) {
+                out.println("<table class=\"w3-table-all\">\n"
+                            + "<tr class=\"w3-blue\"><th>Имя пользователя</th><th>текст заголовка</th></tr> <!--ряд с ячейками заголовков-->\n");
+                for (JDBCDriverConnection.UserType s : UserList) {
+                    //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
+                    out.println(
+                               "<tr><td>" + s.Names + "</td><td>" + s.Pass + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
+
+                    );
                 }
-                out.println("</ul>");
+                out.println("</table>");
 
             } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"
                     +

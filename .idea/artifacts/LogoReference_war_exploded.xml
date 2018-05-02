@@ -7,7 +7,7 @@
           <element id="module-output" name="LogoReference" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.postgresql:postgresql:9.4.1208" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.2.jre7" />
         </element>
       </element>
       <element id="directory" name="META-INF">
