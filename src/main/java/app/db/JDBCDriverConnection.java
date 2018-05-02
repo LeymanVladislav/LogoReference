@@ -40,7 +40,7 @@ public class JDBCDriverConnection {
             // create a connection to the database
             conn = DriverManager.getConnection(url, User, Pass);
 
-            System.out.println(PKG_NAME + "." + Modul + "Connection to SQLite has been established.");
+            System.out.println(PKG_NAME + "." + Modul + "Connection to DB has been established.");
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -58,6 +58,183 @@ public class JDBCDriverConnection {
             } catch (SQLException ex) {
                 System.out.println(PKG_NAME + "." + Modul + ex.getMessage());
             }
+    }
+
+    // Создание окружения
+    public static void createDbObjects() {
+        String Modul = "createDbObjects ";
+
+        // SQL statement for get user list
+        String sql;
+
+        // create table dysgraphia
+        sql = "CREATE TABLE dysgraphia\n" +
+                "(\n" +
+                "    id integer NOT NULL,\n" +
+                "    name character(100) NOT NULL,\n" +
+                "    description character(4000) NOT NULL,\n" +
+                "    PRIMARY KEY (id)\n" +
+                ")\n" +
+                "WITH (\n" +
+                "    OIDS = FALSE\n" +
+                ");\n" +
+                "\n" +
+                "ALTER TABLE dysgraphia\n" +
+                "    OWNER to jrcyfbsexdmqnt;\n";
+
+        // create trigger dysgraphia
+        sql += "CREATE SEQUENCE \"dysgraphia_id_seq\";\n" +
+                "\n" +
+                "ALTER SEQUENCE \"dysgraphia_id_seq\"\n" +
+                "    OWNER TO jrcyfbsexdmqnt;\n" +
+                "\t\n" +
+                "CREATE FUNCTION dysgraphia_id_trg_fnk()\n" +
+                "    RETURNS trigger\n" +
+                "    LANGUAGE 'plpgsql'\n" +
+                "    NOT LEAKPROOF \n" +
+                "AS $BODY$\n" +
+                " BEGIN\n" +
+                "   New.id:=nextval('dysgraphia_id_seq');\n" +
+                "   Return NEW;\n" +
+                " END;\n" +
+                "$BODY$;\n" +
+                "\n" +
+                "ALTER FUNCTION dysgraphia_id_trg_fnk()\n" +
+                "    OWNER TO jrcyfbsexdmqnt;\t\n" +
+                "\t\n" +
+                "CREATE TRIGGER dysgraphia_id_trg\n" +
+                "    BEFORE INSERT\n" +
+                "    ON users\n" +
+                "    FOR EACH ROW\n" +
+                "    EXECUTE PROCEDURE dysgraphia_id_trg_fnk();\n";
+
+        // create table defect
+        sql += "CREATE TABLE defect\n" +
+                "(\n" +
+                "    id integer NOT NULL,\n" +
+                "    name character(100) NOT NULL,\n" +
+                "\tdysgraphia_id  integer NOT NULL,\n" +
+                "    description character(4000) NOT NULL,\n" +
+                "    PRIMARY KEY (id),\n" +
+                "    CONSTRAINT violations_id_fk FOREIGN KEY (dysgraphia_id)\n" +
+                "        REFERENCES dysgraphia (id) MATCH SIMPLE\n" +
+                "        ON UPDATE NO ACTION\n" +
+                "        ON DELETE NO ACTION\n" +
+                ")\n" +
+                "WITH (\n" +
+                "    OIDS = FALSE\n" +
+                ");\n" +
+                "\n" +
+                "ALTER TABLE defect\n" +
+                "    OWNER to jrcyfbsexdmqnt;";
+        // create trigger defect
+        sql += "CREATE SEQUENCE \"defect_id_seq\";\n" +
+                "\n" +
+                "ALTER SEQUENCE \"defect_id_seq\"\n" +
+                "    OWNER TO jrcyfbsexdmqnt;\n" +
+                "\t\n" +
+                "CREATE FUNCTION defect_id_trg_fnk()\n" +
+                "    RETURNS trigger\n" +
+                "    LANGUAGE 'plpgsql'\n" +
+                "    NOT LEAKPROOF \n" +
+                "AS $BODY$\n" +
+                " BEGIN\n" +
+                "   New.id:=nextval('defect_id_seq');\n" +
+                "   Return NEW;\n" +
+                " END;\n" +
+                "$BODY$;\n" +
+                "\n" +
+                "ALTER FUNCTION defect_id_trg_fnk()\n" +
+                "    OWNER TO jrcyfbsexdmqnt;\t\n" +
+                "\t\n" +
+                "CREATE TRIGGER defect_id_trg\n" +
+                "    BEFORE INSERT\n" +
+                "    ON users\n" +
+                "    FOR EACH ROW\n" +
+                "    EXECUTE PROCEDURE defect_id_trg_fnk();\n";
+
+        // create table dysgraphia
+        sql += "CREATE TABLE exercises\n" +
+                "(\n" +
+                "    id integer NOT NULL,\n" +
+                "    name character(100) NOT NULL,\n" +
+                "\tdysgraphia_id  integer NOT NULL,\n" +
+                "    description character(4000) NOT NULL,\n" +
+                "    PRIMARY KEY (id),\n" +
+                "    CONSTRAINT violations_id_fk FOREIGN KEY (dysgraphia_id)\n" +
+                "        REFERENCES dysgraphia (id) MATCH SIMPLE\n" +
+                "        ON UPDATE NO ACTION\n" +
+                "        ON DELETE NO ACTION\n" +
+                ")\n" +
+                "WITH (\n" +
+                "    OIDS = FALSE\n" +
+                ");\n" +
+                "\n" +
+                "ALTER TABLE exercises\n" +
+                "    OWNER to jrcyfbsexdmqnt;\n";
+
+        // create trigger exercises
+        sql += "CREATE SEQUENCE \"exercises_id_seq\";\n" +
+                "\n" +
+                "ALTER SEQUENCE \"exercises_id_seq\"\n" +
+                "    OWNER TO jrcyfbsexdmqnt;\n" +
+                "\t\n" +
+                "CREATE FUNCTION exercises_id_trg_fnk()\n" +
+                "    RETURNS trigger\n" +
+                "    LANGUAGE 'plpgsql'\n" +
+                "    NOT LEAKPROOF \n" +
+                "AS $BODY$\n" +
+                " BEGIN\n" +
+                "   New.id:=nextval('exercises_id_seq');\n" +
+                "   Return NEW;\n" +
+                " END;\n" +
+                "$BODY$;\n" +
+                "\n" +
+                "ALTER FUNCTION exercises_id_trg_fnk()\n" +
+                "    OWNER TO jrcyfbsexdmqnt;\t\n" +
+                "\t\n" +
+                "CREATE TRIGGER exercises_id_trg\n" +
+                "    BEFORE INSERT\n" +
+                "    ON users\n" +
+                "    FOR EACH ROW\n" +
+                "    EXECUTE PROCEDURE exercises_id_trg_fnk();\n";
+
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(sql);
+            System.out.println(PKG_NAME + "." + Modul + "All objects has been created.");
+        } catch (SQLException e) {
+            System.out.println(PKG_NAME + "." + Modul + e.getMessage());
+        }
+    }
+
+    // Удаление окружения
+    public static void dropDbObjects() {
+        String Modul = "dropDbObjects ";
+
+        // SQL statement for get user list
+        String sql;
+
+        // DROP ALL OBJ
+        sql = "DROP FUNCTION defect_id_trg_fnk CASCADE;\n" +
+                "DROP SEQUENCE defect_id_seq;\n" +
+                "DROP TABLE defect CASCADE;\n" +
+                "\n" +
+                "DROP FUNCTION dysgraphia_id_trg_fnk CASCADE;\n" +
+                "DROP SEQUENCE dysgraphia_id_seq;\n" +
+                "DROP TABLE dysgraphia CASCADE;\n" +
+                "\n" +
+                "DROP FUNCTION exercises_id_trg_fnk CASCADE;\n" +
+                "DROP SEQUENCE exercises_id_seq;\n" +
+                "DROP TABLE exercises CASCADE;\n";
+
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(sql);
+            System.out.println(PKG_NAME + "." + Modul + "All objects has been droped.");
+        } catch (SQLException e) {
+            System.out.println(PKG_NAME + "." + Modul + e.getMessage());
+        }
     }
 
     // Получение списка пользователей
@@ -140,7 +317,9 @@ public class JDBCDriverConnection {
         Idlst.add("4");
         Idlst.add("1");
         //System.out.println("test: " + Idlst.get(2));
-        getUserList(Idlst);
+        //getUserList(Idlst);
+        //dropDbObjects();
+        createDbObjects();
         close();
     }
 }
