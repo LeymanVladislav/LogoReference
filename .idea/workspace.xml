@@ -8,11 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/change.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/change.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,8 +61,17 @@
       <file leaf-file-name="change.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/change.jsp">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="26" column="91" selection-start-line="26" selection-start-column="91" selection-end-line="26" selection-end-column="91" />
+              <caret line="19" column="114" selection-start-line="19" selection-start-column="114" selection-end-line="19" selection-end-column="114" />
             </state>
           </provider>
         </entry>
@@ -75,16 +80,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="19" column="157" selection-start-line="19" selection-start-column="144" selection-end-line="19" selection-end-column="157" />
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChangeServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChangeServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+            <state relative-caret-position="312">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,12 +169,12 @@
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/AddServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/db/SQLiteJDBCDriverConnection.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/change.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/change.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
       </list>
     </option>
   </component>
@@ -546,21 +551,7 @@
       <workItem from="1525060666615" duration="3617000" />
       <workItem from="1525156457873" duration="17087000" />
       <workItem from="1525238398011" duration="23824000" />
-      <workItem from="1525349993137" duration="8378000" />
-    </task>
-    <task id="LOCAL-00012" summary="Commit From LV PC">
-      <created>1523983959099</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1523983959099</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Commit From LV PC">
-      <created>1524070832516</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1524070832516</updated>
+      <workItem from="1525349993137" duration="8579000" />
     </task>
     <task id="LOCAL-00014" summary="Commit From LV PC">
       <created>1524155663319</created>
@@ -891,11 +882,25 @@
       <option name="project" value="LOCAL" />
       <updated>1525274339381</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Commit From LV PC">
+      <created>1525358523747</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1525358523748</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Commit From LV PC">
+      <created>1525358617364</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1525358617364</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158667000" />
+    <option name="totallyTimeSpent" value="158868000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -929,9 +934,9 @@
       <window_info anchor="bottom" id="Java Enterprise" order="24" sideWeight="0.49838188" weight="0.32946634" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Version Control" order="23" sideWeight="0.49514562" weight="0.32946634" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.4959547" visible="true" weight="0.32946634" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4959547" visible="true" weight="0.32946634" />
       <window_info anchor="bottom" id="Terminal" order="21" sideWeight="0.4975728" weight="0.32946634" />
-      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.899654" visible="true" weight="0.3527508" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.899654" visible="true" weight="0.3527508" />
       <window_info id="Web" order="11" sideWeight="0.10034602" side_tool="true" visible="true" weight="0.3527508" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="10" side_tool="true" />
@@ -1165,13 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1203,20 +1201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/change.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="91" selection-start-line="26" selection-start-column="91" selection-end-line="26" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="157" selection-start-line="19" selection-start-column="144" selection-end-line="19" selection-end-column="157" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1244,11 +1228,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+        <state relative-caret-position="312">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/change.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="114" selection-start-line="19" selection-start-column="114" selection-end-line="19" selection-end-column="114" />
         </state>
       </provider>
     </entry>
