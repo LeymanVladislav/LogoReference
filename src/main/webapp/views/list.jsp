@@ -17,15 +17,15 @@
             <h2>Users</h2>
         </div>
         <%
-            ArrayList<JDBCDriverConnection.UserType> UserList = (ArrayList<JDBCDriverConnection.UserType>) request.getAttribute("UserList");
+            ArrayList<JDBCDriverConnection.ExercisesType> ExercisesList = (ArrayList<JDBCDriverConnection.ExercisesType>) request.getAttribute("ExercisesList");
 
-            if (UserList != null && !UserList.isEmpty()) {
+            if (ExercisesList != null && !ExercisesList.isEmpty()) {
                 out.println("<table class=\"w3-table-all\">\n"
-                            + "<tr class=\"w3-blue\"><th>Имя пользователя</th><th>текст заголовка</th></tr> <!--ряд с ячейками заголовков-->\n");
-                for (JDBCDriverConnection.UserType s : UserList) {
+                            + "<tr class=\"w3-blue\"><th>Упражнение</th><th>Описание</th><th>Дисграфия</th></tr> <!--ряд с ячейками заголовков-->\n");
+                for (JDBCDriverConnection.ExercisesType s : ExercisesList) {
                     //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
                     out.println(
-                               "<tr><td>" + s.Names + "</td><td>" + s.Pass + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
+                               "<tr><td>" + s.name + "</td><td>" + s.description + "</td><td>" + s.dysgraphia + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
 
                     );
                 }

@@ -18,17 +18,17 @@
         </div>
         <%
             //ArrayList<String> names = (ArrayList<String>) request.getAttribute("userNames");
-            ArrayList<JDBCDriverConnection.UserType> UserList = (ArrayList<JDBCDriverConnection.UserType>) request.getAttribute("UserList");
+            ArrayList<JDBCDriverConnection.DefectType> DefectList = (ArrayList<JDBCDriverConnection.DefectType>) request.getAttribute("DefectList");
 
-            if (UserList != null && !UserList.isEmpty()) {
+            if (DefectList != null && !DefectList.isEmpty()) {
                 out.println(
                         "<form method=\"post\" class=\"w3-selection w3-light-grey w3-padding\">\n"
                         + "<table class=\"w3-table-all\">\n"
-                            + "<tr class=\"w3-blue\"><th>Change</th><th>ID</th><th>Имя пользователя</th><th>Пароль</th></tr> <!--ряд с ячейками заголовков-->\n");
-                for (JDBCDriverConnection.UserType s : UserList) {
+                            + "<tr class=\"w3-blue\"><th>Change</th><th>ID</th><th>Название</th><th>Описание</th></tr> <!--ряд с ячейками заголовков-->\n");
+                for (JDBCDriverConnection.DefectType s : DefectList) {
                     //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
                     out.println(
-                               "<tr><td><input type=\"checkbox\" name=\"ID\" value=\"" + s.Id + "\"/></td><td>" + s.Id + "</td><td>" + s.Names + "</td><td>" + s.Pass + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
+                               "<tr><td><input type=\"checkbox\" name=\"ID\" value=\"" + s.id + "\"/></td><td>" + s.id + "</td><td>" + s.name + "</td><td>" + s.description + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
 
                     );
                 }

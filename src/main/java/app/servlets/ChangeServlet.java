@@ -17,13 +17,12 @@ public class ChangeServlet extends HttpServlet {
         response.setContentType("UTF-8");
         request.setCharacterEncoding("UTF-8");
 
-        ArrayList<JDBCDriverConnection.UserType> UserList;
+        ArrayList<JDBCDriverConnection.DefectType> DefectList;
         JDBCDriverConnection.connect();
-        UserList = JDBCDriverConnection.getUserList();
+        DefectList = JDBCDriverConnection.getDefectList();
         JDBCDriverConnection.close();
-        //System.out.println("DBServlet Names.size():" + Names.size());
 
-        request.setAttribute("UserList", UserList);
+        request.setAttribute("DefectList", DefectList);
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/change.jsp");
         requestDispatcher.forward(request, response);
@@ -39,19 +38,18 @@ public class ChangeServlet extends HttpServlet {
         String[] IdStr = request.getParameterValues("ID");
 
         if (IdStr != null) {
-        ArrayList<String> IdList = new ArrayList<>(Arrays.asList(IdStr));
+        ArrayList<String> DefectIDList = new ArrayList<>(Arrays.asList(IdStr));
 
-            System.out.println("ChangeServlet IdList:" + IdList.toString());
+            System.out.println("ChangeServlet IdList:" + DefectIDList);
 
-            ArrayList<JDBCDriverConnection.UserType> UserList;
+            ArrayList<JDBCDriverConnection.ExercisesType> ExercisesList;
             // Получаем список c данными пользователей по id
             JDBCDriverConnection.connect();
-            UserList = JDBCDriverConnection.getUserList(IdList);
+            ExercisesList = JDBCDriverConnection.getExercisesList(DefectIDList);
             JDBCDriverConnection.close();
-            //System.out.println("DBServlet Names.size():" + Names.size());
 
             // Передаем набранный список в запрос
-            request.setAttribute("UserList", UserList);
+            request.setAttribute("ExercisesList", ExercisesList);
     }
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/list.jsp");

@@ -20,10 +20,25 @@ public class JDBCDriverConnection {
                                 //"jdbc:postgresql://localhost:5432/postgres";
     private static Connection conn = null;
 
-    public static class UserType {
-        public String Id;
-        public String Names;
-        public String Pass;
+    public static class DysgraphiaType {
+        public Integer id;
+        public String name;
+        public String description;
+    }
+
+    public static class DefectType {
+        public Integer id;
+        public String name;
+        public Integer dysgraphia_id;
+        public String description;
+    }
+
+    public static class ExercisesType {
+        public Integer id;
+        public String name;
+        public Integer dysgraphia_id;
+        public String description;
+        public String dysgraphia;
     }
 
     /**
@@ -104,7 +119,7 @@ public class JDBCDriverConnection {
                 "\t\n" +
                 "CREATE TRIGGER dysgraphia_id_trg\n" +
                 "    BEFORE INSERT\n" +
-                "    ON users\n" +
+                "    ON dysgraphia\n" +
                 "    FOR EACH ROW\n" +
                 "    EXECUTE PROCEDURE dysgraphia_id_trg_fnk();\n";
 
@@ -116,7 +131,7 @@ public class JDBCDriverConnection {
                 "\tdysgraphia_id  integer NOT NULL,\n" +
                 "    description character(4000) NOT NULL,\n" +
                 "    PRIMARY KEY (id),\n" +
-                "    CONSTRAINT violations_id_fk FOREIGN KEY (dysgraphia_id)\n" +
+                "    CONSTRAINT defect_dysgraphia_id_fk FOREIGN KEY (dysgraphia_id)\n" +
                 "        REFERENCES dysgraphia (id) MATCH SIMPLE\n" +
                 "        ON UPDATE NO ACTION\n" +
                 "        ON DELETE NO ACTION\n" +
@@ -149,11 +164,11 @@ public class JDBCDriverConnection {
                 "\t\n" +
                 "CREATE TRIGGER defect_id_trg\n" +
                 "    BEFORE INSERT\n" +
-                "    ON users\n" +
+                "    ON defect\n" +
                 "    FOR EACH ROW\n" +
                 "    EXECUTE PROCEDURE defect_id_trg_fnk();\n";
 
-        // create table dysgraphia
+        // create table exercises
         sql += "CREATE TABLE exercises\n" +
                 "(\n" +
                 "    id integer NOT NULL,\n" +
@@ -161,7 +176,7 @@ public class JDBCDriverConnection {
                 "\tdysgraphia_id  integer NOT NULL,\n" +
                 "    description character(4000) NOT NULL,\n" +
                 "    PRIMARY KEY (id),\n" +
-                "    CONSTRAINT violations_id_fk FOREIGN KEY (dysgraphia_id)\n" +
+                "    CONSTRAINT exercises_dysgraphia_id_fk FOREIGN KEY (dysgraphia_id)\n" +
                 "        REFERENCES dysgraphia (id) MATCH SIMPLE\n" +
                 "        ON UPDATE NO ACTION\n" +
                 "        ON DELETE NO ACTION\n" +
@@ -171,7 +186,11 @@ public class JDBCDriverConnection {
                 ");\n" +
                 "\n" +
                 "ALTER TABLE exercises\n" +
-                "    OWNER to jrcyfbsexdmqnt;\n";
+                "    OWNER to jrcyfbsexdmqnt;\n" +
+                "CREATE INDEX exercises_dys_id_idx\n" +
+                "    ON exercises USING btree\n" +
+                "    (dysgraphia_id ASC NULLS LAST)\n" +
+                "    TABLESPACE pg_default;\n";
 
         // create trigger exercises
         sql += "CREATE SEQUENCE \"exercises_id_seq\";\n" +
@@ -195,7 +214,7 @@ public class JDBCDriverConnection {
                 "\t\n" +
                 "CREATE TRIGGER exercises_id_trg\n" +
                 "    BEFORE INSERT\n" +
-                "    ON users\n" +
+                "    ON exercises\n" +
                 "    FOR EACH ROW\n" +
                 "    EXECUTE PROCEDURE exercises_id_trg_fnk();\n";
 
@@ -237,13 +256,13 @@ public class JDBCDriverConnection {
         }
     }
 
-    // Получение списка пользователей
-    public static ArrayList<UserType> getUserList(ArrayList<String> IDList) {
-        String Modul = "getUserList ";
-        System.out.println("getUserList");
+    // Получение списка ошибок
+    public static ArrayList<DefectType> getDefectList(ArrayList<String> IDList) {
+        String Modul = "getDefectList ";
+        ArrayList<DefectType> DefectList = new ArrayList<>();
         // SQL statement for get user list
         String sql = "select * \n"
-                + "from users";
+                + "from defect";
         String id = null;
         if(IDList != null && !IDList.isEmpty()){
             System.out.println("IDList is not null");
@@ -260,7 +279,61 @@ public class JDBCDriverConnection {
 
         System.out.println(PKG_NAME + "." + Modul + " sql:" + sql);
 
-        ArrayList<UserType> UserList = new ArrayList<>();
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(sql);
+            ResultSet rs    = stmt.executeQuery(sql);
+
+            System.out.println(PKG_NAME + "." + Modul + " SQL RESULT:");
+            // loop through the result set
+            while (rs.next()) {
+                DefectType DefectStr = new DefectType();
+                DefectStr.id = rs.getInt("id");
+                DefectStr.name = rs.getString("name");
+                DefectStr.dysgraphia_id = rs.getInt("dysgraphia_id");
+                DefectStr.description = rs.getString("description");
+                DefectList.add(DefectStr);
+
+                System.out.println(rs.getInt("id") + "\t" +
+                        rs.getString("name") + "\t" +
+                        rs.getInt("dysgraphia_id"));
+                        //rs.getDouble("capacity"));
+            }
+
+        } catch (SQLException e) {
+            System.out.println(PKG_NAME + "." + Modul + e.getMessage());
+        }
+        return DefectList;
+    }
+    // Получение списка ошибок
+    public static ArrayList<DefectType> getDefectList() {
+        return getDefectList(null);
+    }
+
+    // Получение списка упражнений
+    public static ArrayList<ExercisesType> getExercisesList(ArrayList<String> DefectIDList) {
+        String Modul = "getExercisesList ";
+        ArrayList<ExercisesType> ExercisesList = new ArrayList<>();
+        // SQL statement for get user list
+        String sql = "select e.*, dg.name dysgraphia\n" +
+                "from exercises e\n" +
+                "join dysgraphia dg on dg.id = e.dysgraphia_id\n";
+        String id = null;
+        if(DefectIDList != null && !DefectIDList.isEmpty()){
+            System.out.println("IDList is not null");
+            for (int i = 0; i < DefectIDList.size(); i = i + 1)
+                if (i == 0) {
+                    id = DefectIDList.get(i);
+                } else {
+                    id += ", " + DefectIDList.get(i);
+                }
+            sql = sql + "join defect d on e.dysgraphia_id = d.dysgraphia_id\n" +
+                    " where d.id in (" + id + ")";
+        }
+
+        sql = sql + ";";
+
+        System.out.println(PKG_NAME + "." + Modul + " sql:" + sql);
 
         try {
             Statement stmt = conn.createStatement();
@@ -270,26 +343,28 @@ public class JDBCDriverConnection {
             System.out.println(PKG_NAME + "." + Modul + " SQL RESULT:");
             // loop through the result set
             while (rs.next()) {
-                UserType UserStr = new UserType();
-                UserStr.Id = rs.getString("ID");
-                UserStr.Names = rs.getString("NAME");
-                UserStr.Pass = rs.getString("PASS");
-                UserList.add(UserStr);
+                ExercisesType ExercisesStr = new ExercisesType();
+                ExercisesStr.id = rs.getInt("id");
+                ExercisesStr.name = rs.getString("name");
+                ExercisesStr.dysgraphia_id = rs.getInt("dysgraphia_id");
+                ExercisesStr.description = rs.getString("description");
+                ExercisesStr.dysgraphia = rs.getString("dysgraphia");
+                ExercisesList.add(ExercisesStr);
 
-                System.out.println(rs.getInt("ID") + "\t" +
-                        rs.getString("NAME") + "\t" +
-                        rs.getString("PASS"));
-                        //rs.getDouble("capacity"));
+                System.out.println(rs.getInt("id") + "\t" +
+                        rs.getString("name") + "\t" +
+                        rs.getInt("dysgraphia_id"));
+                //rs.getDouble("capacity"));
             }
 
         } catch (SQLException e) {
             System.out.println(PKG_NAME + "." + Modul + e.getMessage());
         }
-        return UserList;
+        return ExercisesList;
     }
-    // Получение списка пользователей
-    public static ArrayList<UserType> getUserList() {
-        return getUserList(null);
+    // Получение списка ошибок
+    public static ArrayList<ExercisesType> getExercisesList() {
+        return getExercisesList(null);
     }
 
     // Добавление пользователя
@@ -317,9 +392,10 @@ public class JDBCDriverConnection {
         Idlst.add("4");
         Idlst.add("1");
         //System.out.println("test: " + Idlst.get(2));
-        //getUserList(Idlst);
+        //getDefectList(Idlst);
         //dropDbObjects();
-        createDbObjects();
+        getExercisesList(Idlst);
+        //createDbObjects();
         close();
     }
 }

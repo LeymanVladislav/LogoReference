@@ -16,7 +16,7 @@ public class ListServlet extends HttpServlet {
         // Задаем кодировку для обработчика запросов
         response.setContentType("UTF-8");
         request.setCharacterEncoding("UTF-8");
-
+/*
         ArrayList<JDBCDriverConnection.UserType> UserList;
         JDBCDriverConnection.connect();
         UserList = JDBCDriverConnection.getUserList();
@@ -24,7 +24,7 @@ public class ListServlet extends HttpServlet {
         //System.out.println("DBServlet Names.size():" + Names.size());
 
         request.setAttribute("UserList", UserList);
-
+*/
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/list.jsp");
         requestDispatcher.forward(request, response);
     }

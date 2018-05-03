@@ -6,7 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="" />
+    <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/change.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/change.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/list.jsp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,7 +56,7 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="357">
               <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
             </state>
           </provider>
@@ -58,8 +65,8 @@
       <file leaf-file-name="change.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/change.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="48" lean-forward="true" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+            <state relative-caret-position="323">
+              <caret line="26" column="91" selection-start-line="26" selection-start-column="91" selection-end-line="26" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -67,8 +74,8 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+            <state relative-caret-position="204">
+              <caret line="19" column="157" selection-start-line="19" selection-start-column="144" selection-end-line="19" selection-end-column="157" />
             </state>
           </provider>
         </entry>
@@ -76,20 +83,8 @@
       <file leaf-file-name="ChangeServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="45" column="55" lean-forward="true" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="25" column="51" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="25" selection-end-column="51" />
+            <state relative-caret-position="346">
+              <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,12 +95,18 @@
       <file leaf-file-name="JDBCDriverConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+            <state relative-caret-position="261">
+              <caret line="313" column="90" selection-start-line="313" selection-start-column="78" selection-end-line="313" selection-end-column="90" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3966#3967#0" expanded="true" />
-                <element signature="e#4006#4007#0" expanded="true" />
+                <element signature="method#connect#0;class#JDBCDriverConnection#0" />
+                <element signature="method#close#0;class#JDBCDriverConnection#0" />
+                <element signature="method#createDbObjects#0;class#JDBCDriverConnection#0" />
+                <element signature="method#dropDbObjects#0;class#JDBCDriverConnection#0" />
+                <element signature="method#getUserList#0;class#JDBCDriverConnection#0" />
+                <element signature="e#13566#13567#0" expanded="true" />
+                <element signature="e#13608#13609#0" expanded="true" />
+                <element signature="method#AddUser#0;class#JDBCDriverConnection#0" />
               </folding>
             </state>
           </provider>
@@ -166,8 +167,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/change.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java" />
       </list>
     </option>
@@ -336,22 +337,22 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="app.servlets" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\GITHUB\IDEA\LogoReference\src\main\webapp\views" />
-      <recent name="E:\GITHUB\IDEA\LogoReference\src\main\webapp" />
-      <recent name="E:\GITHUB\IDEA\LogoReference\src\main" />
-      <recent name="E:\GITHUB\IDEA\LogoReference\src\main\webapp\WEB-INF" />
-      <recent name="E:\GITHUB\IDEA\LogoReference" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="app.servlets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\GITHUB\IDEA\LogoReference\src\main\webapp" />
       <recent name="E:\GITHUB\IDEA\LogoReference\src\main" />
       <recent name="E:\GITHUB\IDEA\LogoReference" />
       <recent name="E:\GITHUB\IDEA\LogoReference\Java Resources\src\java" />
       <recent name="E:\GITHUB\IDEA\LogoReference\src\main\db" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.servlets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GITHUB\IDEA\LogoReference\src\main\webapp\views" />
+      <recent name="E:\GITHUB\IDEA\LogoReference\src\main\webapp" />
+      <recent name="E:\GITHUB\IDEA\LogoReference\src\main" />
+      <recent name="E:\GITHUB\IDEA\LogoReference\src\main\webapp\WEB-INF" />
+      <recent name="E:\GITHUB\IDEA\LogoReference" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -544,14 +545,8 @@
       <workItem from="1524986721272" duration="4392000" />
       <workItem from="1525060666615" duration="3617000" />
       <workItem from="1525156457873" duration="17087000" />
-      <workItem from="1525238398011" duration="10589000" />
-    </task>
-    <task id="LOCAL-00011" summary="Commit From LV PC">
-      <created>1523983936819</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1523983936819</updated>
+      <workItem from="1525238398011" duration="23824000" />
+      <workItem from="1525349993137" duration="8378000" />
     </task>
     <task id="LOCAL-00012" summary="Commit From LV PC">
       <created>1523983959099</created>
@@ -889,11 +884,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525248030685</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Commit From LV PC">
+      <created>1525274339381</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1525274339381</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137054000" />
+    <option name="totallyTimeSpent" value="158667000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -921,16 +923,16 @@
       <window_info id="UI Designer" order="14" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.39907193" />
       <window_info anchor="bottom" id="TODO" order="18" sideWeight="0.49838188" weight="0.32946634" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" sideWeight="0.49676377" visible="true" weight="0.32946634" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49676377" weight="0.32946634" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info id="Image Layers" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="24" sideWeight="0.49838188" weight="0.32946634" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Version Control" order="23" sideWeight="0.49514562" weight="0.32946634" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4959547" weight="0.32946634" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.4959547" visible="true" weight="0.32946634" />
       <window_info anchor="bottom" id="Terminal" order="21" sideWeight="0.4975728" weight="0.32946634" />
-      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.90138406" visible="true" weight="0.34708738" />
-      <window_info id="Web" order="11" sideWeight="0.098615915" side_tool="true" visible="true" weight="0.34708738" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.899654" visible="true" weight="0.3527508" />
+      <window_info id="Web" order="11" sideWeight="0.10034602" side_tool="true" visible="true" weight="0.3527508" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
@@ -995,7 +997,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1196,51 +1198,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="357">
           <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/change.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="48" lean-forward="true" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        <state relative-caret-position="323">
+          <caret line="26" column="91" selection-start-line="26" selection-start-column="91" selection-end-line="26" selection-end-column="91" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3966#3967#0" expanded="true" />
-            <element signature="e#4006#4007#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="19" column="157" selection-start-line="19" selection-start-column="144" selection-end-line="19" selection-end-column="157" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="25" column="51" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="25" selection-end-column="51" />
+        <state relative-caret-position="54">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="313" column="90" selection-start-line="313" selection-start-column="78" selection-end-line="313" selection-end-column="90" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#connect#0;class#JDBCDriverConnection#0" />
+            <element signature="method#close#0;class#JDBCDriverConnection#0" />
+            <element signature="method#createDbObjects#0;class#JDBCDriverConnection#0" />
+            <element signature="method#dropDbObjects#0;class#JDBCDriverConnection#0" />
+            <element signature="method#getUserList#0;class#JDBCDriverConnection#0" />
+            <element signature="e#13566#13567#0" expanded="true" />
+            <element signature="e#13608#13609#0" expanded="true" />
+            <element signature="method#AddUser#0;class#JDBCDriverConnection#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="45" column="55" lean-forward="true" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+        <state relative-caret-position="346">
+          <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
