@@ -52,7 +52,7 @@ public class ChangeServlet extends HttpServlet {
             request.setAttribute("ExercisesList", ExercisesList);
     }
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/list.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/exercises.jsp");
         requestDispatcher.forward(request, response);
     }
 }

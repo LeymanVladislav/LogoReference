@@ -327,8 +327,7 @@ public class JDBCDriverConnection {
                 } else {
                     id += ", " + DefectIDList.get(i);
                 }
-            sql = sql + "join defect d on e.dysgraphia_id = d.dysgraphia_id\n" +
-                    " where d.id in (" + id + ")";
+            sql = sql + "where dg.id in (select d.dysgraphia_id from defect d where d.id in (" + id + "))";
         }
 
         sql = sql + ";";
