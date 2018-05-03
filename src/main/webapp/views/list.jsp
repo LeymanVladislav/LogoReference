@@ -14,7 +14,7 @@
 <div class="w3-container w3-center w3-margin-bottom w3-padding">
     <div class="w3-card-4">
         <div class="w3-container w3-light-blue">
-            <h2>Список ошибок</h2>
+            <h2>Список упражнений</h2>
         </div>
         <%
             ArrayList<JDBCDriverConnection.ExercisesType> ExercisesList = (ArrayList<JDBCDriverConnection.ExercisesType>) request.getAttribute("ExercisesList");
