@@ -6,8 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="">
+    <list default="true" id="4ed920e4-dfa6-4c6b-9bb1-f4539927d83c" name="Default" comment="Commit From LV PC">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,7 +43,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
+            <state>
               <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
             </state>
           </provider>
@@ -57,47 +58,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="change.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/change.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="30" column="180" selection-start-line="30" selection-start-column="180" selection-end-line="30" selection-end-column="180" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exercises.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/exercises.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" column="171" selection-start-line="27" selection-start-column="171" selection-end-line="27" selection-end-column="171" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="114" selection-start-line="19" selection-start-column="114" selection-end-line="19" selection-end-column="114" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChangeServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCDriverConnection.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="324" column="29" lean-forward="true" selection-start-line="324" selection-start-column="29" selection-end-line="324" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,12 +127,12 @@
         <option value="$PROJECT_DIR$/src/main/java/app/db/SQLiteJDBCDriverConnection.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/ListServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/change.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/exercises.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
       </list>
     </option>
   </component>
@@ -198,9 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,6 +276,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -540,20 +512,8 @@
       <workItem from="1525238398011" duration="23824000" />
       <workItem from="1525349993137" duration="10509000" />
       <workItem from="1525361006098" duration="1927000" />
-    </task>
-    <task id="LOCAL-00017" summary="Commit From LV PC">
-      <created>1524378124420</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1524378124420</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Commit From LV PC">
-      <created>1524382828927</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1524382828927</updated>
+      <workItem from="1525447409413" duration="1391000" />
+      <workItem from="1525498546152" duration="10241000" />
     </task>
     <task id="LOCAL-00019" summary="Commit From LV PC">
       <created>1524384077168</created>
@@ -884,11 +844,25 @@
       <option name="project" value="LOCAL" />
       <updated>1525362793617</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Commit From LV PC">
+      <created>1525447518395</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1525447518396</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Commit From LV PC">
+      <created>1525453471358</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1525453471358</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162725000" />
+    <option name="totallyTimeSpent" value="174357000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -901,42 +875,41 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="20" sideWeight="0.5040453" side_tool="true" weight="0.32946634" />
-      <window_info anchor="bottom" id="Application Servers" order="25" sideWeight="0.49838188" weight="0.32946634" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5040453" side_tool="true" weight="0.32946634" />
+      <window_info anchor="bottom" id="Application Servers" order="15" sideWeight="0.49838188" weight="0.32946634" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="22" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="13" />
-      <window_info id="Designer" order="15" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Designer" order="7" />
       <window_info anchor="right" id="Database" order="9" weight="0.32928804" />
-      <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="14" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.39907193" />
-      <window_info anchor="bottom" id="TODO" order="18" sideWeight="0.49838188" weight="0.32946634" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49676377" weight="0.32946634" />
+      <window_info id="UI Designer" order="6" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39907193" />
+      <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49838188" weight="0.32946634" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.49676377" weight="0.32946634" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info id="Image Layers" order="12" />
-      <window_info anchor="bottom" id="Java Enterprise" order="24" sideWeight="0.49838188" weight="0.32946634" />
+      <window_info id="Image Layers" order="5" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" sideWeight="0.49838188" weight="0.32946634" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="23" sideWeight="0.49514562" weight="0.32946634" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4959547" weight="0.32946634" />
-      <window_info anchor="bottom" id="Terminal" order="21" sideWeight="0.4975728" weight="0.32946634" />
-      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.89791185" visible="true" weight="0.35841423" />
-      <window_info id="Web" order="11" sideWeight="0.10208817" side_tool="true" visible="true" weight="0.35841423" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49514562" weight="0.32946634" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4959547" visible="true" weight="0.32946634" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4975728" weight="0.32946634" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8927336" visible="true" weight="0.36893204" />
+      <window_info id="Web" order="4" sideWeight="0.10726643" side_tool="true" visible="true" weight="0.36893204" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Favorites" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32946634" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32946634" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32946634" />
-      <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.27508092" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" order="19" weight="0.32946634" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32946634" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1153,15 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
+        <state>
           <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1169,16 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="28" column="51" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1189,45 +1145,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="114" selection-start-line="19" selection-start-column="114" selection-end-line="19" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/list.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/servlets/ChangeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
+        <state relative-caret-position="493">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/change.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="30" column="180" selection-start-line="30" selection-start-column="180" selection-end-line="30" selection-end-column="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/exercises.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="171" selection-start-line="27" selection-start-column="171" selection-end-line="27" selection-end-column="171" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/db/JDBCDriverConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="324" column="29" lean-forward="true" selection-start-line="324" selection-start-column="29" selection-end-line="324" selection-end-column="29" />
+        <state relative-caret-position="5627">
+          <caret line="331" selection-start-line="331" selection-end-line="331" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/exercises.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/change.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="180" selection-start-line="30" selection-start-column="180" selection-end-line="30" selection-end-column="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
