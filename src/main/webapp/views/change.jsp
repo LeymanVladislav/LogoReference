@@ -60,7 +60,7 @@
     <div class="w3-center w3-padding-top-64">
          <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">СПРАВОЧНИК</span>
     </div>
-    <div class="w3-content w3-container w3-center w3-margin-bottom w3-padding-32">
+    <div class="w3-content w3-container w3-center w3-padding-32">
     <div class="w3-card-4 w3-deep-ocean-l1">
         <div class="w3-container">
             <h2>Список ошибок</h2>
