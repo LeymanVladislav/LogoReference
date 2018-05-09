@@ -66,11 +66,11 @@
 
             if (ExercisesList != null && !ExercisesList.isEmpty()) {
                 out.println("<table class=\"w3-table w3-striped-deep-ocean-l3\">\n"
-                        + "<tr class=\"w3-deep-ocean\"><th>Упражнение</th><th>Описание</th><th>Дисграфия</th></tr> <!--ряд с ячейками заголовков-->\n");
+                        + "<tr class=\"w3-deep-ocean\"><th>Упражнение</th><th>Описание</th><th>Дисграфия</th><th></th></tr> <!--ряд с ячейками заголовков-->\n");
                 for (JDBCDriverConnection.ExercisesType s : ExercisesList) {
                     //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
                     out.println(
-                            "<tr class=\"w3-hover-deep-ocean\"><td valign=\"center\">" + s.name + "</td><td>" + s.description + "</td><td>" + s.dysgraphia + "<img src=\"resources\\images\\exercises\\" + s.id + ".jpg\" class=\"w3-round-xlarge\" alt=\"Norway\" style=\"width:30%\"></td></tr> <!--ряд с ячейками тела таблицы-->\n"
+                            "<tr class=\"w3-hover-deep-ocean\"><td valign=\"middle\">" + s.name + "</td><td>" + s.description + "</td><td  align=\"center\">" + s.dysgraphia + "</td><td><img src=\"resources\\images\\exercises\\" + s.id + ".jpg\" class=\"w3-round-xlarge\" alt=\"Norway\" style=\"width:50%\"></td></tr> <!--ряд с ячейками тела таблицы-->\n"
 
                     );
                 }
