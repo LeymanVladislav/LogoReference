@@ -31,7 +31,9 @@ h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
 .w3-table,.w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.w3-table-all{border:1px solid #ccc}
-.w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}
+.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.w3-striped-deep-ocean-l3 tbody tr:nth-child(even){background-color:#91b6d0}
 .w3-table-all tr:nth-child(odd){background-color:#fff}.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
 .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}.w3-centered tr th,.w3-centered tr td{text-align:center}
 .w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
@@ -229,3 +231,15 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-dark-grey,.w3-hover-border-dark-grey:hover,.w3-border-dark-gray,.w3-hover-border-dark-gray:hover{border-color:#616161!important}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
+/* Custom colors*/
+.w3-deep-ocean-l5,.w3-hover-deep-ocean-l5:hover {color:#000 !important; background-color:#eff4f8 !important}
+.w3-deep-ocean-l4,.w3-hover-deep-ocean-l4:hover {color:#000 !important; background-color:#c8dae7 !important}
+.w3-deep-ocean-l3,.w3-hover-deep-ocean-l3:hover {color:#000 !important; background-color:#91b6d0 !important}
+.w3-deep-ocean-l2,.w3-hover-deep-ocean-l2:hover {color:#fff !important; background-color:#5a91b8 !important}
+.w3-deep-ocean-l1,.w3-hover-deep-ocean-l1:hover {color:#fff !important; background-color:#3b6889 !important}
+.w3-deep-ocean,.w3-hover-deep-ocean:hover{color:#fff!important;background-color:#233e51!important}
+.w3-deep-ocean-d1,.w3-hover-deep-ocean-d1:hover {color:#fff !important; background-color:#20384a !important}
+.w3-deep-ocean-d2,.w3-hover-deep-ocean-d2:hover {color:#fff !important; background-color:#1c3242 !important}
+.w3-deep-ocean-d3,.w3-hover-deep-ocean-d3:hover {color:#fff !important; background-color:#192c39 !important}
+.w3-deep-ocean-d4,.w3-hover-deep-ocean-d4:hover {color:#fff !important; background-color:#152631 !important}
+.w3-deep-ocean-d5,.w3-hover-deep-ocean-d5:hover {color:#fff !important; background-color:#121f29 !important}
