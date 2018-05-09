@@ -24,6 +24,12 @@
         background-size: cover;
     }
 
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('/resources/images/logopedia.jpg');
+        min-height: 100%;
+    }
+
 </style>
 </head>
 <body class="w3-deep-ocean">
@@ -50,13 +56,11 @@
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="reference">
-    <h3 class="w3-center">СПРАВОЧНИК</h3>
-    <p class="w3-center"><em>Чета там</em></p>
-
-</div>
-
-<div class="w3-content w3-container w3-center w3-margin-bottom w3-padding-64">
+<div class="bgimg-1 w3-display-container w3-opacity-min">
+    <div class="w3-center w3-padding-top-64">
+         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">СПРАВОЧНИК</span>
+    </div>
+    <div class="w3-content w3-container w3-center w3-margin-bottom w3-padding-32">
     <div class="w3-card-4 w3-deep-ocean-l1">
         <div class="w3-container">
             <h2>Список ошибок</h2>
@@ -89,6 +93,7 @@
                     "</div>");
         %>
     </div>
+</div>
 </div>
 
 <!-- Footer -->
