@@ -63,7 +63,7 @@
     <div class="w3-content w3-container w3-center w3-padding-32">
     <div class="w3-card-4 w3-deep-ocean-l1">
         <div class="w3-container">
-            <h2>Список ошибок</h2>
+            <h3 class="w3-animate-opacity w3-wide" style="white-space:nowrap;">СПИСОК ОШИБОК</h3>
         </div>
         <%
             //ArrayList<String> names = (ArrayList<String>) request.getAttribute("userNames");
@@ -72,7 +72,7 @@
             if (DefectList != null && !DefectList.isEmpty()) {
                 out.println(
                         "<form method=\"post\" class=\"w3-selection\">\n"
-                                + "<table class=\"w3-table w3-striped-deep-ocean-l3\">\n"
+                                + "<table class=\"w3-table w3-striped-deep-ocean-l3 w3-animate-opacity\">\n"
                                 + "<tr class=\"w3-deep-ocean\"><th>Change</th><th>ID</th><th>Название</th><th>Описание</th></tr> <!--ряд с ячейками заголовков-->\n");
                 for (JDBCDriverConnection.DefectType s : DefectList) {
                     //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
@@ -82,7 +82,7 @@
                     );
                 }
                 out.println("</table>"
-                        + "<p><button type=\"submit\" class=\"w3-btn w3-deep-ocean w3-round-large w3-margin-bottom\">Submit</button></p>\n"
+                        + "<p><button type=\"submit\" class=\"w3-btn w3-deep-ocean w3-round-large w3-margin-bottom\">Далее</button></p>\n"
                         + "</form>");
 
             } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"

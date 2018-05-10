@@ -5,17 +5,6 @@
          version="4.0">
     <display-name>Archetype Created Web Application</display-name>
 
-    <!-- add servlet -->
-    <servlet>
-        <servlet-name>add</servlet-name>
-        <servlet-class>app.servlets.AddServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>add</servlet-name>
-        <url-pattern>/add</url-pattern>
-    </servlet-mapping>
-
     <!-- change servlet -->
     <servlet>
         <servlet-name>change</servlet-name>
@@ -25,17 +14,6 @@
     <servlet-mapping>
         <servlet-name>change</servlet-name>
         <url-pattern>/change</url-pattern>
-    </servlet-mapping>
-
-    <!-- list servlet -->
-    <servlet>
-        <servlet-name>list</servlet-name>
-        <servlet-class>app.servlets.ListServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>list</servlet-name>
-        <url-pattern>/list</url-pattern>
     </servlet-mapping>
 
 </web-app>

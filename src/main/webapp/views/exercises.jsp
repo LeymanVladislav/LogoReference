@@ -24,6 +24,12 @@
             background-size: cover;
         }
 
+        /* First image (Logo. Full height) */
+        .bgimg-1 {
+            background-image: url('/resources/images/logopedia.jpg');
+            min-height: 100%;
+        }
+
     </style>
 </head>
 <body class="w3-deep-ocean">
@@ -50,39 +56,37 @@
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="reference">
-    <h3 class="w3-center">СПРАВОЧНИК</h3>
-    <p class="w3-center"><em>Чета там</em></p>
+<div class="bgimg-1 w3-display-container w3-opacity-min">
+    <div class="w3-center w3-padding-top-64">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">СПРАВОЧНИК</span>
+    </div>
+    <div class="w3-content w3-container w3-center w3-padding-32">
+        <div class="w3-card-4 w3-deep-ocean-l1">
+            <div class="w3-container">
+                <h3 class="w3-animate-opacity w3-wide" style="white-space:nowrap;">СПИСОК УПРАЖНЕНИЙ</h3>
+            </div>
+            <%
+                ArrayList<JDBCDriverConnection.ExercisesType> ExercisesList = (ArrayList<JDBCDriverConnection.ExercisesType>) request.getAttribute("ExercisesList");
 
-</div>
+                if (ExercisesList != null && !ExercisesList.isEmpty()) {
+                    out.println("<table class=\"w3-table w3-striped-deep-ocean-l3 w3-animate-opacity\">\n"
+                            + "<tr class=\"w3-deep-ocean\"><th>Упражнение</th><th>Описание</th><th>Дисграфия</th><th></th></tr> <!--ряд с ячейками заголовков-->\n");
+                    for (JDBCDriverConnection.ExercisesType s : ExercisesList) {
+                        //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
+                        out.println(
+                                "<tr class=\"w3-hover-deep-ocean\"><td valign=\"middle\">" + s.name + "</td><td>" + s.description + "</td><td  align=\"center\">" + s.dysgraphia + "</td><td><img src=\"resources\\images\\exercises\\" + s.id + ".jpg\" class=\"w3-round-xlarge\" alt=\"Norway\" style=\"width:50%\"></td></tr> <!--ряд с ячейками тела таблицы-->\n"
+                        );
+                    }
+                    out.println("</table>");
 
-<div class="w3-content w3-container w3-center w3-margin-bottom w3-padding-64">
-    <div class="w3-card-4 w3-deep-ocean-l1">
-        <div class="w3-container">
-            <h2>Список упражнений</h2>
+                } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"
+                        +
+                        "   <span onclick=\"this.parentElement.style.display='none'\"\n" +
+                        "   class=\"w3-button w3-margin-right w3-display-right w3-round-large w3-hover-red w3-border w3-border-red w3-hover-border-grey\">×</span>\n" +
+                        "   <h5>There are no users yet!</h5>\n" +
+                        "</div>");
+            %>
         </div>
-        <%
-            ArrayList<JDBCDriverConnection.ExercisesType> ExercisesList = (ArrayList<JDBCDriverConnection.ExercisesType>) request.getAttribute("ExercisesList");
-
-            if (ExercisesList != null && !ExercisesList.isEmpty()) {
-                out.println("<table class=\"w3-table w3-striped-deep-ocean-l3\">\n"
-                        + "<tr class=\"w3-deep-ocean\"><th>Упражнение</th><th>Описание</th><th>Дисграфия</th><th></th></tr> <!--ряд с ячейками заголовков-->\n");
-                for (JDBCDriverConnection.ExercisesType s : ExercisesList) {
-                    //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
-                    out.println(
-                            "<tr class=\"w3-hover-deep-ocean\"><td valign=\"middle\">" + s.name + "</td><td>" + s.description + "</td><td  align=\"center\">" + s.dysgraphia + "</td><td><img src=\"resources\\images\\exercises\\" + s.id + ".jpg\" class=\"w3-round-xlarge\" alt=\"Norway\" style=\"width:50%\"></td></tr> <!--ряд с ячейками тела таблицы-->\n"
-
-                    );
-                }
-                out.println("</table>");
-
-            } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"
-                    +
-                    "   <span onclick=\"this.parentElement.style.display='none'\"\n" +
-                    "   class=\"w3-button w3-margin-right w3-display-right w3-round-large w3-hover-red w3-border w3-border-red w3-hover-border-grey\">×</span>\n" +
-                    "   <h5>There are no users yet!</h5>\n" +
-                    "</div>");
-        %>
     </div>
 </div>
 

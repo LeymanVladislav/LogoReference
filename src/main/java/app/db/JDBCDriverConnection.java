@@ -97,32 +97,6 @@ public class JDBCDriverConnection {
                 "ALTER TABLE dysgraphia\n" +
                 "    OWNER to jrcyfbsexdmqnt;\n";
 
-        // create trigger dysgraphia
-        sql += "CREATE SEQUENCE \"dysgraphia_id_seq\";\n" +
-                "\n" +
-                "ALTER SEQUENCE \"dysgraphia_id_seq\"\n" +
-                "    OWNER TO jrcyfbsexdmqnt;\n" +
-                "\t\n" +
-                "CREATE FUNCTION dysgraphia_id_trg_fnk()\n" +
-                "    RETURNS trigger\n" +
-                "    LANGUAGE 'plpgsql'\n" +
-                "    NOT LEAKPROOF \n" +
-                "AS $BODY$\n" +
-                " BEGIN\n" +
-                "   New.id:=nextval('dysgraphia_id_seq');\n" +
-                "   Return NEW;\n" +
-                " END;\n" +
-                "$BODY$;\n" +
-                "\n" +
-                "ALTER FUNCTION dysgraphia_id_trg_fnk()\n" +
-                "    OWNER TO jrcyfbsexdmqnt;\t\n" +
-                "\t\n" +
-                "CREATE TRIGGER dysgraphia_id_trg\n" +
-                "    BEFORE INSERT\n" +
-                "    ON dysgraphia\n" +
-                "    FOR EACH ROW\n" +
-                "    EXECUTE PROCEDURE dysgraphia_id_trg_fnk();\n";
-
         // create table defect
         sql += "CREATE TABLE defect\n" +
                 "(\n" +
@@ -192,31 +166,55 @@ public class JDBCDriverConnection {
                 "    (dysgraphia_id ASC NULLS LAST)\n" +
                 "    TABLESPACE pg_default;\n";
 
-        // create trigger exercises
-        sql += "CREATE SEQUENCE \"exercises_id_seq\";\n" +
-                "\n" +
-                "ALTER SEQUENCE \"exercises_id_seq\"\n" +
-                "    OWNER TO jrcyfbsexdmqnt;\n" +
-                "\t\n" +
-                "CREATE FUNCTION exercises_id_trg_fnk()\n" +
-                "    RETURNS trigger\n" +
-                "    LANGUAGE 'plpgsql'\n" +
-                "    NOT LEAKPROOF \n" +
-                "AS $BODY$\n" +
-                " BEGIN\n" +
-                "   New.id:=nextval('exercises_id_seq');\n" +
-                "   Return NEW;\n" +
-                " END;\n" +
-                "$BODY$;\n" +
-                "\n" +
-                "ALTER FUNCTION exercises_id_trg_fnk()\n" +
-                "    OWNER TO jrcyfbsexdmqnt;\t\n" +
-                "\t\n" +
-                "CREATE TRIGGER exercises_id_trg\n" +
-                "    BEFORE INSERT\n" +
-                "    ON exercises\n" +
-                "    FOR EACH ROW\n" +
-                "    EXECUTE PROCEDURE exercises_id_trg_fnk();\n";
+        // insert
+        sql +=  // insert into dysgraphia
+                "insert into dysgraphia(id,name,description) values(1,'Дисграфия 1','Описание Дисграфия 1');\n" +
+                "insert into dysgraphia(id,name,description) values(2,'Дисграфия 2','Описание Дисграфия 2');\n" +
+                // insert into defect
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 1',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 2',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 3',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 4',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 5',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 6',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 7',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 8',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 9',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 10',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 11',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 12',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 13',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 14',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 15',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 16',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 17',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 18',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 19',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 20',1,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 21',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 22',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 23',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 24',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 25',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 26',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 27',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 28',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 29',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 30',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 31',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 32',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 33',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 34',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 35',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 36',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 37',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 38',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 39',2,'Описание Ошибка ');\n" +
+                "insert into defect(name,dysgraphia_id,description) values('Ошибка 40',2,'Описание Ошибка ');\n" +
+                // insert into dysgraphia
+                "insert into exercises(id,name,dysgraphia_id,description) values(1,'Упражнение 1',1,'Описание Упражнение 1');\n" +
+                "insert into exercises(id,name,dysgraphia_id,description) values(2,'Упражнение 2',2,'Описание Упражнение 2');\n" +
+                "commit;";
 
         try {
             Statement stmt = conn.createStatement();
@@ -239,12 +237,8 @@ public class JDBCDriverConnection {
                 "DROP SEQUENCE defect_id_seq;\n" +
                 "DROP TABLE defect CASCADE;\n" +
                 "\n" +
-                "DROP FUNCTION dysgraphia_id_trg_fnk CASCADE;\n" +
-                "DROP SEQUENCE dysgraphia_id_seq;\n" +
                 "DROP TABLE dysgraphia CASCADE;\n" +
                 "\n" +
-                "DROP FUNCTION exercises_id_trg_fnk CASCADE;\n" +
-                "DROP SEQUENCE exercises_id_seq;\n" +
                 "DROP TABLE exercises CASCADE;\n";
 
         try {
@@ -392,9 +386,10 @@ public class JDBCDriverConnection {
         Idlst.add("1");
         //System.out.println("test: " + Idlst.get(2));
         //getDefectList(Idlst);
+        //getExercisesList(Idlst);
+
         //dropDbObjects();
-        getExercisesList(Idlst);
-        //createDbObjects();
+        createDbObjects();
         close();
     }
 }
