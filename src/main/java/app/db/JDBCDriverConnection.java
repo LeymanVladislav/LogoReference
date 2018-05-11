@@ -12,10 +12,10 @@ public class JDBCDriverConnection {
     private static String DBDriver = "jdbc:postgresql";
     private static String Host = "ec2-79-125-117-53.eu-west-1.compute.amazonaws.com";
     private static String Port = "5432";
-    private static String DBName = "d40963l0827185";
+    private static String DBName = "d8hhfcadaek34f";
     private static String SSLMode = "sslmode=require";
-    private static String User = "jrcyfbsexdmqnt";
-    private static String Pass = "2f4a45cef0abbfe16df17d93565ab53d16e2b4994845a77fae3f01c0c7635f07";
+    private static String User = "tisxxhgikougzx";
+    private static String Pass = "2ff4346212f4b9c2a67ed039eecf1d838ecfb01570e08c44ff53063275d43f6b";
     private static String url = DBDriver + "://" + Host + ":" + Port + "/" + DBName + "?" + SSLMode;
                                 //"jdbc:postgresql://localhost:5432/postgres";
     private static Connection conn = null;
