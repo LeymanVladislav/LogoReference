@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,25 +35,53 @@ public class ChangeServlet extends HttpServlet {
         response.setContentType("UTF-8");
         request.setCharacterEncoding("UTF-8");
 
-        // Получаем id выбраных пользователей на странице change.jsp
-        String[] IdStr = request.getParameterValues("ID");
+        HttpSession session = request.getSession();
+        ArrayList<String> DefectIDList;
+        ArrayList<JDBCDriverConnection.ExercisesType> ExercisesList;
 
-        if (IdStr != null) {
-        ArrayList<String> DefectIDList = new ArrayList<>(Arrays.asList(IdStr));
+        String FormName;
+    FormName = request.getParameter("FormName");
+    System.out.println("Тест ChangeServlet FormName:" + FormName);
 
+    // Если запрос из формы change, сохраняем список ошибок
+    if (FormName != null && !FormName.isEmpty()) {
+        if (FormName.equals(new String("change"))) {
+            System.out.println("Тест еее ChangeServlet FormName = change");
+
+            // Получаем id выбраных пользователей на странице change.jsp
+            String[] IdStr = request.getParameterValues("ID");
+            DefectIDList = new ArrayList<>(Arrays.asList(IdStr));
             System.out.println("ChangeServlet IdList:" + DefectIDList);
 
-            ArrayList<JDBCDriverConnection.ExercisesType> ExercisesList;
-            // Получаем список c данными пользователей по id
+            if (IdStr != null) {
+
+                // Передаем набранный список в запрос
+                //request.setAttribute("ExercisesList", ExercisesList);
+                session.setAttribute("DefectIDList", DefectIDList);
+            }
+
+            System.out.println("Тест открываем views/age.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/period.jsp");
+            requestDispatcher.forward(request, response);
+        }
+        // Если запрос из формы age, сохраняем период и запрашиваем упражнения
+        else if (FormName.equals(new String("period"))) {
+
+            // Получаем период
+            String Period = request.getParameter("isTitles");
+
+            // Получаем список c id ошибок
+            DefectIDList = (ArrayList<String>) session.getAttribute("DefectIDList");
+
+            // Получаем в БД список упражнений
             JDBCDriverConnection.connect();
-            ExercisesList = JDBCDriverConnection.getExercisesList(DefectIDList);
+            ExercisesList = JDBCDriverConnection.getExercisesList(DefectIDList,Period);
             JDBCDriverConnection.close();
 
-            // Передаем набранный список в запрос
             request.setAttribute("ExercisesList", ExercisesList);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/exercises.jsp");
+            requestDispatcher.forward(request, response);
+        }
     }
-
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/exercises.jsp");
-        requestDispatcher.forward(request, response);
     }
 }

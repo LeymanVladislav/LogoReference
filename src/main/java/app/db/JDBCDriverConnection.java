@@ -305,7 +305,7 @@ public class JDBCDriverConnection {
     }
 
     // Получение списка упражнений
-    public static ArrayList<ExercisesType> getExercisesList(ArrayList<String> DefectIDList) {
+    public static ArrayList<ExercisesType> getExercisesList(ArrayList<String> DefectIDList, String Period) {
         String Modul = "getExercisesList ";
         ArrayList<ExercisesType> ExercisesList = new ArrayList<>();
         // SQL statement for get user list
@@ -357,7 +357,7 @@ public class JDBCDriverConnection {
     }
     // Получение списка ошибок
     public static ArrayList<ExercisesType> getExercisesList() {
-        return getExercisesList(null);
+        return getExercisesList(null,null);
     }
 
     // Добавление пользователя
