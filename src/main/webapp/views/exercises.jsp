@@ -60,12 +60,12 @@
 </div>
 
 <!-- Container (About Section) -->
-<div class="bgimg-1 w3-display-container w3-opacity-min">
+<div class="bgimg-1 w3-display-container" id="home">
     <div class="w3-center w3-padding-top-64">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">СПРАВОЧНИК</span>
+        <span class="w3-center w3-padding-large w3-font-bold w3-text-green  w3-xlarge w3-wide w3-animate-opacity" style="background-color:rgba(255, 255, 255, 0.7);">СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</span>
     </div>
     <div class="w3-content w3-container w3-center w3-padding-32">
-        <div class="w3-card-4 w3-deep-ocean-l1">
+        <div class="w3-card-4" style="background-color:rgba(0, 102, 0, 0.7);">
             <div class="w3-container">
                 <h3 class="w3-animate-opacity w3-wide" style="white-space:nowrap;">СПИСОК УПРАЖНЕНИЙ</h3>
             </div>
@@ -73,21 +73,24 @@
                 ArrayList<JDBCDriverConnection.ExercisesType> ExercisesList = (ArrayList<JDBCDriverConnection.ExercisesType>) request.getAttribute("ExercisesList");
 
                 if (ExercisesList != null && !ExercisesList.isEmpty()) {
-                    out.println("<table class=\"w3-table w3-striped-deep-ocean-l3 w3-animate-opacity\">\n"
-                            + "<tr class=\"w3-deep-ocean\"><th>Упражнение</th><th>Описание</th><th>Дисграфия</th><th></th></tr> <!--ряд с ячейками заголовков-->\n");
+                    out.println("<table class=\"w3-table w3-striped-cast-green-l1 w3-animate-opacity\">\n"
+                            + "<tr class=\"w3-cast-green\"><th>Упражнение</th><th>Описание</th><th>Дисграфия</th><th></th></tr> <!--ряд с ячейками заголовков-->\n");
                     for (JDBCDriverConnection.ExercisesType s : ExercisesList) {
                         //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
                         out.println(
-                                "<tr class=\"w3-hover-deep-ocean\"><td valign=\"middle\">" + s.name + "</td><td>" + s.description + "</td><td  align=\"center\">" + s.dysgraphia + "</td><td><img src=\"resources\\images\\exercises\\" + s.id + ".jpg\" class=\"w3-round-xlarge\" alt=\"Norway\" style=\"width:50%\"></td></tr> <!--ряд с ячейками тела таблицы-->\n"
+                                "<tr class=\"w3-hover-cast-green\"><td valign=\"middle\">" + s.name + "</td><td>" + s.description + "</td><td  align=\"center\">" + s.dysgraphia + "</td><td><img src=\"resources\\images\\exercises\\" + s.id + ".jpg\" class=\"w3-round-xlarge\" alt=\"Norway\" style=\"width:50%\"></td></tr> <!--ряд с ячейками тела таблицы-->\n"
                         );
                     }
-                    out.println("</table>");
+                    out.println("</table>"
+                            + "<p><a href=\"/change\" class=\"w3-button w3-margin w3-light-grey\"><i class=\"fa fa-arrow-left w3-text-cast-green w3-margin-right\"></i>Назад</a>"
+                            + "<a><button type=\"submit\" class=\"w3-button w3-margin w3-light-grey\">Печать<i class=\"fa fa-print w3-text-cast-green w3-margin-left\"></i></button></a></p>"
+                            + "</form>");
 
                 } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"
                         +
                         "   <span onclick=\"this.parentElement.style.display='none'\"\n" +
                         "   class=\"w3-button w3-margin-right w3-display-right w3-round-large w3-hover-red w3-border w3-border-red w3-hover-border-grey\">×</span>\n" +
-                        "   <h5>There are no exercises yet!</h5>\n" +
+                        "   <h5>Приносим свои извинения, упражнения для выбранных ошибок еще не загружены</h5>\n" +
                         "</div>");
             %>
         </div>

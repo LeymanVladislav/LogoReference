@@ -66,7 +66,8 @@ public class ChangeServlet extends HttpServlet {
         else if (FormName.equals(new String("period"))) {
 
             // Получаем период
-            String Period = request.getParameter("isTitles");
+            String Period = request.getParameter("period");
+            System.out.println("Получен период Period:" + Period);
 
             // Получаем список c id ошибок
             DefectIDList = (ArrayList<String>) session.getAttribute("DefectIDList");
