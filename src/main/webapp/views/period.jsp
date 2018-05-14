@@ -43,7 +43,7 @@
                 <i class="fa fa-bars"></i>
             </a>
             <a href="/change" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-book"></i>СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</a>
-            <a href="#about" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-user"></i>О НАС</a>
+            <a href="/#about" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-user"></i>О НАС</a>
             <a href="/" class="w3-bar-item w3-button w3-right w3-hover-dark-grey">ГЛАВНАЯ</a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-dark-grey">
                 <i class="fa fa-search"></i>
@@ -53,7 +53,7 @@
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-right">
-        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">О НАС</a>
+        <a href="/#about" class="w3-bar-item w3-button" onclick="toggleFunction()">О НАС</a>
         <a href="/change" class="w3-bar-item w3-button" onclick="toggleFunction()">СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</a>
         <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
