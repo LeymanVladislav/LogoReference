@@ -33,7 +33,7 @@
 
     </style>
 </head>
-<body class="w3-deep-ocean">
+<body class="w3-cast-green">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">

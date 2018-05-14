@@ -26,45 +26,49 @@
 
     /* First image (Logo. Full height) */
     .bgimg-1 {
-        background-image: url('/resources/images/logopedia.jpg');
+        background-image: url('/resources/images/logopedia.png');
         min-height: 100%;
+        /*opacity: 0.3;*/
     }
 
 </style>
 </head>
-<body class="w3-deep-ocean">
+<body class="w3-cast-green">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar w3-text-white" id="myNavbar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right w3-hover-indigo" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="/change" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-book"></i>СПРАВОЧНИК</a>
-        <a href="/" class="w3-bar-item w3-button w3-right w3-hover-dark-grey">ГЛАВНАЯ</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-dark-grey">
-            <i class="fa fa-search"></i>
-        </a>
-
+    <div class="w3-bar w3-text-cast-green-l1" style="background-color:rgba(255, 255, 255, 0.7);" id="myNavbar">
+        <div class="w3-opacity-off">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right w3-hover-dark-grey" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="/change" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-book"></i>СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</a>
+            <a href="#about" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-user"></i>О НАС</a>
+            <a href="/" class="w3-bar-item w3-button w3-right w3-hover-dark-grey">ГЛАВНАЯ</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-dark-grey">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
     </div>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-right">
-        <a href="/change" class="w3-bar-item w3-button" onclick="toggleFunction()">СПРАВОЧНИК</a>
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">О НАС</a>
+        <a href="/change" class="w3-bar-item w3-button" onclick="toggleFunction()">СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</a>
         <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
 </div>
 
 <!-- Container (About Section) -->
-<div class="bgimg-1 w3-display-container w3-opacity-min">
+<div class="bgimg-1 w3-display-container" id="home">
     <div class="w3-center w3-padding-top-64">
-         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">СПРАВОЧНИК</span>
+        <span class="w3-center w3-padding-large w3-font-bold w3-text-green  w3-xlarge w3-wide w3-animate-opacity" style="background-color:rgba(255, 255, 255, 0.7);">СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</span>
     </div>
     <div class="w3-content w3-container w3-center w3-padding-32">
-    <div class="w3-card-4 w3-deep-ocean-l1">
-        <div class="w3-container">
-            <h3 class="w3-animate-opacity w3-wide" style="white-space:nowrap;">ВЫБЕРЕТЕ ПЕРИОД</h3>
-        </div>
+        <div class="w3-card-4" style="background-color:rgba(0, 102, 0, 0.7);">
+            <div class="w3-container">
+                <h3 class="w3-animate-opacity w3-wide" style="white-space:nowrap;">ВЫБОР ПЕРИОДА</h3>
+            </div>
         <%
             if (1 == 1){
                 out.println(
@@ -75,7 +79,8 @@
                         "  <option value=6>6 Месяцев</option>\n" +
                         "  <option value=12>1 Год</option>\n" +
                         "</select>\n" +
-                        "<p><button type=\"submit\" class=\"w3-btn w3-deep-ocean w3-round-large w3-margin-bottom\">Далее</button></p>\n" +
+                        "<p><a href=\"/change\" class=\"w3-button w3-margin w3-light-grey\"><i class=\"fa fa-arrow-left w3-text-cast-green w3-margin-right\"></i>Назад</a>" +
+                        "<a><button type=\"submit\" class=\"w3-button w3-margin w3-light-grey\">Далее<i class=\"fa fa-arrow-right w3-text-cast-green w3-margin-left\"></i></button></a></p>" +
                         "</form>");
 
             } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"
@@ -91,7 +96,7 @@
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="/" class="w3-button w3-light-grey"><i class="fa fa-arrow-left w3-margin-right"></i>Back</a>
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <div class="w3-xlarge w3-section">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>
         <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -109,9 +114,9 @@
     function myFunction() {
         var navbar = document.getElementById("myNavbar");
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-deep-ocean";
+            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-cast-green";
         } else {
-            navbar.className = navbar.className.replace("w3-card w3-animate-top w3-deep-ocean", "w3-text-white");
+            navbar.className = navbar.className.replace("w3-card w3-animate-top w3-cast-green", "w3-text-cast-green-l1");
         }
     }
 
