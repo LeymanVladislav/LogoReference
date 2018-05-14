@@ -82,10 +82,18 @@
                                 "<tr class=\"w3-cast-green\"><th>Выбрать</th><th>Название</th><th>Описание</th></tr> <!--ряд с ячейками заголовков-->\n");
                 for (JDBCDriverConnection.DefectType s : DefectList) {
                     //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
-                    out.println(
-                            "<tr class=\"w3-hover-cast-green\"><td><input type=\"checkbox\" name=\"ID\" value=\"" + s.id + "\"/></td><td class=\"w3-left-align\">" + s.name + "</td><td>" + s.description + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
+                    if (s.dysgraphia_id == 2) {
+                        out.println(
+                                "<tr class=\"w3-hover-cast-green\"><td><input type=\"checkbox\" checked name=\"ID\" value=\"" + s.id + "\"/></td><td class=\"w3-left-align\">" + s.name + "</td><td>" + s.description + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
 
-                    );
+                        );
+                    }
+                    else {
+                        out.println(
+                                "<tr class=\"w3-hover-cast-green\"><td><input type=\"checkbox\" name=\"ID\" value=\"" + s.id + "\"/></td><td class=\"w3-left-align\">" + s.name + "</td><td>" + s.description + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
+
+                        );
+                    }
                 }
                 out.println("</table>"
                         + "<p><a href=\"/\" class=\"w3-button w3-margin w3-light-grey\"><i class=\"fa fa-arrow-left w3-text-cast-green w3-margin-right\"></i>Назад</a>"
