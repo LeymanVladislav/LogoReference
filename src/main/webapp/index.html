@@ -24,8 +24,9 @@
 
     /* First image (Logo. Full height) */
     .bgimg-1 {
-        background-image: url('/resources/images/logopedia.jpg');
+        background-image: url('/resources/images/logopedia.png');
         min-height: 100%;
+        /*opacity: 0.3;*/
     }
 
     .w3-wide {letter-spacing: 10px;}
@@ -38,34 +39,39 @@
         }
     }
 </style>
-<body class="w3-deep-ocean">
+<body class="w3-cast-green-l3">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar w3-text-white" id="myNavbar">
+    <div class="w3-bar w3-text-cast-green-l1" style="background-color:rgba(255, 255, 255, 0.7);" id="myNavbar">
+        <div class="w3-opacity-off">
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right w3-hover-dark-grey" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
             <i class="fa fa-bars"></i>
         </a>
-        <a href="/change" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-book"></i>СПРАВОЧНИК</a>
-        <a href="#about" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-user"></i> ABOUT</a>
-        <a href="#home" class="w3-bar-item w3-button w3-right w3-hover-dark-grey">HOME</a>
+        <a href="/change" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-book"></i>СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</a>
+        <a href="#about" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-user"></i>О НАС</a>
+        <a href="#home" class="w3-bar-item w3-button w3-right w3-hover-dark-grey">ГЛАВНАЯ</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-dark-grey">
             <i class="fa fa-search"></i>
         </a>
     </div>
+    </div>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-right">
-        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-        <a href="/change" class="w3-bar-item w3-button" onclick="toggleFunction()">СПРАВОЧНИК</a>
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">О НАС</a>
+        <a href="/change" class="w3-bar-item w3-button" onclick="toggleFunction()">СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</a>
         <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<div class="bgimg-1 w3-display-container" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
+        <div class="w3-center w3-padding-large w3-font-bold w3-text-green w3-xxlarge w3-animate-opacity" style="background-color:rgba(255, 255, 255, 0.7);">
+            <p><span class=""><span class="w3-hide-small">Виртуальная </span>логопедическая мастерская</span></p>
+            <p><span class="">в школе</span></p>
+        </div>
     </div>
 </div>
 
@@ -129,7 +135,7 @@
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-cast-green";
         } else {
-            navbar.className = navbar.className.replace("w3-card w3-animate-top w3-cast-green", "w3-text-white");
+            navbar.className = navbar.className.replace("w3-card w3-animate-top w3-cast-green", "w3-text-cast-green-l1");
         }
     }
 

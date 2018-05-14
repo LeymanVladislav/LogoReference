@@ -34,6 +34,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}
 .w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
 .w3-striped-deep-ocean-l3 tbody tr:nth-child(even){background-color:#91b6d0}
+.w3-striped-cast-green-l1 tbody tr:nth-child(even){background-color:rgba(0, 184, 0, 0.7);}
 .w3-table-all tr:nth-child(odd){background-color:#fff}.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
 .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}.w3-centered tr th,.w3-centered tr td{text-align:center}
 .w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:center;vertical-align:middle}
@@ -256,3 +257,10 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-cast-green-d3,.w3-hover-cast-green-d3:hover {color:#fff !important; background-color:#004700 !important}
 .w3-cast-green-d4,.w3-hover-cast-green-d4:hover {color:#fff !important; background-color:#003d00 !important}
 .w3-cast-green-d5,.w3-hover-cast-green-d5:hover {color:#fff !important; background-color:#003300 !important}
+.w3-text-cast-green {color:#006600 !important}
+.w3-text-cast-green-l1 {color:#00b800 !important}
+
+.w3-font-bold {font-weight:bold}
+.w3-font-bolder {font-weight:bolder}
+.w3-font-lighter {font-weight:lighter}
+.w3-font-normal {font-weight:normal}

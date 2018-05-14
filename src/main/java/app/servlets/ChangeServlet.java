@@ -48,16 +48,14 @@ public class ChangeServlet extends HttpServlet {
         if (FormName.equals(new String("change"))) {
             System.out.println("Тест еее ChangeServlet FormName = change");
 
-            // Получаем id выбраных пользователей на странице change.jsp
+            // Получаем id выбраных ошибок на странице change.jsp
             String[] IdStr = request.getParameterValues("ID");
-            DefectIDList = new ArrayList<>(Arrays.asList(IdStr));
-            System.out.println("ChangeServlet IdList:" + DefectIDList);
 
             if (IdStr != null) {
-
                 // Передаем набранный список в запрос
-                //request.setAttribute("ExercisesList", ExercisesList);
+                DefectIDList = new ArrayList<>(Arrays.asList(IdStr));
                 session.setAttribute("DefectIDList", DefectIDList);
+                System.out.println("ChangeServlet IdList:" + DefectIDList);
             }
 
             System.out.println("Тест открываем views/age.jsp");

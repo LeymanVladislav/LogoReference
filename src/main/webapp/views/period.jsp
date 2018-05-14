@@ -41,7 +41,7 @@
             <i class="fa fa-bars"></i>
         </a>
         <a href="/change" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-book"></i>СПРАВОЧНИК</a>
-        <a href="/" class="w3-bar-item w3-button w3-right w3-hover-dark-grey">HOME</a>
+        <a href="/" class="w3-bar-item w3-button w3-right w3-hover-dark-grey">ГЛАВНАЯ</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-dark-grey">
             <i class="fa fa-search"></i>
         </a>

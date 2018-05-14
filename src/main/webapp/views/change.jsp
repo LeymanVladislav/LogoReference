@@ -26,42 +26,46 @@
 
     /* First image (Logo. Full height) */
     .bgimg-1 {
-        background-image: url('/resources/images/logopedia.jpg');
+        background-image: url('/resources/images/logopedia.png');
         min-height: 100%;
+        /*opacity: 0.3;*/
     }
 
 </style>
 </head>
-<body class="w3-deep-ocean">
+<body class="w3-cast-green">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar w3-text-white" id="myNavbar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right w3-hover-indigo" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="/change" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-book"></i>СПРАВОЧНИК</a>
-        <a href="/" class="w3-bar-item w3-button w3-right w3-hover-dark-grey">HOME</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-dark-grey">
-            <i class="fa fa-search"></i>
-        </a>
-
+    <div class="w3-bar w3-text-cast-green-l1" style="background-color:rgba(255, 255, 255, 0.7);" id="myNavbar">
+        <div class="w3-opacity-off">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right w3-hover-dark-grey" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="/change" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-book"></i>СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</a>
+            <a href="#about" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-user"></i>О НАС</a>
+            <a href="/" class="w3-bar-item w3-button w3-right w3-hover-dark-grey">ГЛАВНАЯ</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-dark-grey">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
     </div>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-right">
-        <a href="/change" class="w3-bar-item w3-button" onclick="toggleFunction()">СПРАВОЧНИК</a>
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">О НАС</a>
+        <a href="/change" class="w3-bar-item w3-button" onclick="toggleFunction()">СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</a>
         <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
 </div>
 
-<!-- Container (About Section) -->
-<div class="bgimg-1 w3-display-container w3-opacity-min">
+
+<div class="bgimg-1 w3-display-container" id="home">
     <div class="w3-center w3-padding-top-64">
-         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">СПРАВОЧНИК</span>
+         <span class="w3-center w3-padding-large w3-font-bold w3-text-green  w3-xlarge w3-wide w3-animate-opacity" style="background-color:rgba(255, 255, 255, 0.7);">СПРАВОЧНИК ОШИБОК НА ПИСЬМЕ</span>
     </div>
     <div class="w3-content w3-container w3-center w3-padding-32">
-    <div class="w3-card-4 w3-deep-ocean-l1">
+    <div class="w3-card-4" style="background-color:rgba(0, 102, 0, 0.7);">
         <div class="w3-container">
             <h3 class="w3-animate-opacity w3-wide" style="white-space:nowrap;">СПИСОК ОШИБОК</h3>
         </div>
@@ -74,17 +78,18 @@
                         "<form method=\"post\" class=\"w3-selection\">\n" +
                                 // Добавим скрытое поле для передачи названия формы
                                 "<input type=\"hidden\" name=\"FormName\" value=\"change\"/>" +
-                                "<table class=\"w3-table w3-striped-deep-ocean-l3 w3-animate-opacity\">\n" +
-                                "<tr class=\"w3-deep-ocean\"><th>Change</th><th>ID</th><th>Название</th><th>Описание</th></tr> <!--ряд с ячейками заголовков-->\n");
+                                "<table class=\"w3-table w3-striped-cast-green-l1 w3-animate-opacity\">\n" +
+                                "<tr class=\"w3-cast-green\"><th>Выбрать</th><th>Название</th><th>Описание</th></tr> <!--ряд с ячейками заголовков-->\n");
                 for (JDBCDriverConnection.DefectType s : DefectList) {
                     //out.println("<li class=\"w3-hover-sand\">" + s + "</li>");
                     out.println(
-                            "<tr class=\"w3-hover-deep-ocean\"><td><input type=\"checkbox\" name=\"ID\" value=\"" + s.id + "\"/></td><td>" + s.id + "</td><td>" + s.name + "</td><td>" + s.description + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
+                            "<tr class=\"w3-hover-cast-green\"><td><input type=\"checkbox\" name=\"ID\" value=\"" + s.id + "\"/></td><td class=\"w3-left-align\">" + s.name + "</td><td>" + s.description + "</td></tr> <!--ряд с ячейками тела таблицы-->\n"
 
                     );
                 }
                 out.println("</table>"
-                        + "<p><button type=\"submit\" class=\"w3-btn w3-deep-ocean w3-round-large w3-margin-bottom\">Далее</button></p>\n"
+                        + "<p><a href=\"/\" class=\"w3-button w3-margin w3-light-grey\"><i class=\"fa fa-arrow-left w3-text-cast-green w3-margin-right\"></i>Назад</a>"
+                        + "<a><button type=\"submit\" class=\"w3-button w3-margin w3-light-grey\">Далее<i class=\"fa fa-arrow-right w3-text-cast-green w3-margin-left\"></i></button></a></p>"
                         + "</form>");
 
             } else out.println("<div class=\"w3-panel w3-red w3-display-container w3-card-4 w3-round\">\n"
@@ -100,7 +105,7 @@
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="/" class="w3-button w3-light-grey"><i class="fa fa-arrow-left w3-margin-right"></i>Back</a>
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <div class="w3-xlarge w3-section">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>
         <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -118,9 +123,9 @@
     function myFunction() {
         var navbar = document.getElementById("myNavbar");
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-deep-ocean";
+            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-cast-green";
         } else {
-            navbar.className = navbar.className.replace("w3-card w3-animate-top w3-deep-ocean", "w3-text-white");
+            navbar.className = navbar.className.replace("w3-card w3-animate-top w3-cast-green", "w3-text-cast-green-l1");
         }
     }
 
