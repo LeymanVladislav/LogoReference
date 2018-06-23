@@ -10,12 +10,12 @@ import java.util.ArrayList;
 public class JDBCDriverConnection {
     private static String PKG_NAME = "JDBCDriverConnection";
     private static String DBDriver = "jdbc:postgresql";
-    private static String Host = "ec2-54-217-233-71.eu-west-1.compute.amazonaws.com";
+    private static String Host = "ec2-54-75-240-94.eu-west-1.compute.amazonaws.com";
     private static String Port = "5432";
-    private static String DBName = "d8hhfcadaek34f";
+    private static String DBName = "d8fn9l10boqv6n";
     private static String SSLMode = "sslmode=require";
-    private static String User = "tisxxhgikougzx";
-    private static String Pass = "2ff4346212f4b9c2a67ed039eecf1d838ecfb01570e08c44ff53063275d43f6b";
+    private static String User = "ukkdaggjcthmgj";
+    private static String Pass = "aa5af3005fb17b08e90e9d1768ed6ffc0474678eb3f1e0b386bd2d0f1739f818";
     private static String url = DBDriver + "://" + Host + ":" + Port + "/" + DBName + "?" + SSLMode;
                                 //"jdbc:postgresql://localhost:5432/postgres";
     private static Connection conn = null;
